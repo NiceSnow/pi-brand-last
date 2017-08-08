@@ -1,0 +1,54 @@
+//
+//  PrefixHeader.pch
+//  HARMAY_PI_BRAND
+//
+//  Created by Madodg on 2017/7/25.
+//  Copyright © 2017年 Madodg. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Masonry.h"
+#import "DefineClass.h"
+#import "UIView+ViewController.h"
+#import "HTTPRequest.h"
+#import "MJExtension.h"
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "NSString+extension.h"
+#import "HUDView.h"
+
+#import <UMSocialCore/UMSocialCore.h>
+#import <UShareUI/UShareUI.h>
+
+#import "RESideMenu.h"
+
+static NSString *const kGetImageURLKey = @"kGetImageURLKey";
+
+
+static NSString * const UMAppKey      = @"58072b3067e58eada9000c46";
+static NSString * const WXAppId       = @"wxb26db829fea64259";
+static NSString * const WXAppSecret   = @"8TLHFQaAEuxoVnhg3syyB3RmsbQXuMFT";
+static NSString * const QQAppId       = @"1104541426";
+static NSString * const QQAppKey      = @"dqhN5dWv1W0yhsk0";
+
+
+#define versionKey  (NSString *)kCFBundleVersionKey
+#define oldVersion [[NSUserDefaults standardUserDefaults] objectForKey:versionKey]
+#define newVersion [NSBundle mainBundle].infoDictionary[versionKey]
+#define showNewFeature  ![oldVersion isEqualToString:newVersion]
+
+#define BackImageRate 525/842
+//#define BackZoomRate  160
+#define BackZoomHeight 80
+#define BackZoomWith BackZoomHeight*BackImageRate
+#define during 1
+#define tableViewDuring 0.3
+
+#define UserDefault [NSUserDefaults standardUserDefaults]
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
