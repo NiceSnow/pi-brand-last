@@ -188,7 +188,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     WebViewController* webVC = [[WebViewController alloc]init];
-    webVC.MYURL = [[_dict[@"res"][indexPath.row]objectForKey:@"url"] safeUrlString];
+    webVC.MYURL = [_dict[@"res"][indexPath.row]objectForKey:@"url"];
     webVC.LeftCount = 2;
     [self.navigationController pushViewController:webVC animated:YES];
 
@@ -226,7 +226,7 @@
 - (void)pickerView:(PickerView *)pickerView index:(NSInteger)index{
     DebugLog(@"%@",@(index));
     WebViewController* webVC = [[WebViewController alloc]init];
-    webVC.MYURL = [[_dict[@"res"][index]objectForKey:@"url" ] safeUrlString];
+    webVC.MYURL = [_dict[@"res"][index]objectForKey:@"url"];
     webVC.LeftCount = 2;
     [self.navigationController pushViewController:webVC animated:YES];
     

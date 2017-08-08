@@ -147,7 +147,7 @@
         searchModel* modle = self.dataArray[indexPath.row];
         if ([modle.is_hd isEqualToString:@"0"]) {
             WebViewController* webVC = [[WebViewController alloc]init];
-            webVC.MYURL = [modle.url safeUrlString];
+            webVC.MYURL = modle.url;
             webVC.LeftCount = 2;
             [self.navigationController pushViewController:webVC animated:YES];
         }else{

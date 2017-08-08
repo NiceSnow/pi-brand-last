@@ -8,7 +8,7 @@
 
 #import "WebViewController.h"
 
-@interface WebViewController ()<UIWebViewDelegate>
+@interface WebViewController ()<UIWebViewDelegate,UIActionSheetDelegate>
 @property(nonatomic,strong) UIWebView* webView;
 @end
 
@@ -35,28 +35,51 @@
 }
 
 -(void)search:(UIButton*)btn{
-    UIAlertView* aleart = [[UIAlertView alloc]initWithTitle:@"提示" message:@"是否要跳转到外部应用" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"取消", nil];
-    [aleart show];
+
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"选择跳转的三方" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"内置浏览器", @"淘宝",@"天猫", nil];
     
+    actionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+    [actionSheet showInView:self.view];
+    
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 0:
+        {
+            [[UIApplication sharedApplication]openURL:[_MYURL safeUrlString]];
+        }
+            break;
+        case 1:
+        {
+            [[UIApplication sharedApplication]openURL:[[NSString stringWithFormat:@"taobao://%@",_MYURL] safeUrlString]];
+        }
+            break;
+        case 2:
+        {
+            [[UIApplication sharedApplication]openURL:[[NSString stringWithFormat:@"tmall://%@",_MYURL] safeUrlString]];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
-        [[UIApplication sharedApplication] openURL:_MYURL];
+//        [[UIApplication sharedApplication] openURL:_MYURL];
     }else{
         
     }
 }
 
 -(void)setMYURL:(id)MYURL{
-    
+    _MYURL = MYURL;
     [HUDView showHUD:self];
     if ([MYURL isKindOfClass:[NSURL class]]) {
         [self.webView loadRequest:[NSURLRequest requestWithURL:MYURL]];
-        _MYURL = MYURL;
     }else{
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:MYURL]]];
-        _MYURL = [NSURL URLWithString:MYURL];
     }
 }
 
@@ -91,7 +114,7 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
     
     UIButton* rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
-    [rightBtn setImage:[UIImage imageNamed:@"icon_product"] forState:normal];
+    [rightBtn setImage:[UIImage imageNamed:@"diandian"] forState:normal];
     [rightBtn addTarget:self action:@selector(search:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
     // Do any additional setup after loading the view.
