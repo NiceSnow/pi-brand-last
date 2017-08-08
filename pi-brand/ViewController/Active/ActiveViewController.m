@@ -235,6 +235,7 @@
         _tableView.rowHeight = UITableViewAutomaticDimension;
         _tableView.tableFooterView = [UIView new];
         _tableView.tableHeaderView = self.headerView;
+        _tableView.bounces = NO;
         _tableView.alpha = 0;
     }
     return _tableView;
