@@ -39,7 +39,7 @@
 
 -(void)search:(UIButton*)btn{
 
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"选择跳转的三方" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"内置浏览器", otherName, nil];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"请选择打开方式" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"用手机浏览器", otherName, nil];
     
     actionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
     [actionSheet showInView:self.view];

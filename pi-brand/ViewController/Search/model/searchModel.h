@@ -15,4 +15,5 @@
 @property (nonatomic, copy) NSString* vice_heading;
 @property (nonatomic, copy) NSString* url;
 @property (nonatomic, copy) NSString* is_hd;
+@property (nonatomic, strong) NSDictionary* link;
 @end

@@ -148,6 +148,7 @@
         if ([modle.is_hd isEqualToString:@"0"]) {
             WebViewController* webVC = [[WebViewController alloc]init];
             webVC.MYURL = modle.url;
+            webVC.otherLink = modle.link;
             webVC.LeftCount = 2;
             [self.navigationController pushViewController:webVC animated:YES];
         }else{
