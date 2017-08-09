@@ -51,6 +51,7 @@
     NSInteger index = sender.tag - 1000;
     linkModel* modle = modleArray[index];
     VC.MYURL = modle.url;
+    VC.otherLink = modle.link;
     VC.LeftCount = 1;
     [self.ViewController.sideMenuViewController setContentViewController:[[BaseNavigationController alloc]initWithRootViewController:VC ] animated:YES];
     [self.ViewController.sideMenuViewController hideMenuViewController];

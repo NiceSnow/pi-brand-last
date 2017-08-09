@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface WebViewController : UIViewController
+@property (nonatomic, strong) NSDictionary* otherLink;
 @property(nonatomic,strong) id MYURL;
 @property(nonatomic,assign) NSInteger LeftCount;
 @end

@@ -8,7 +8,10 @@
 
 #import "WebViewController.h"
 
-@interface WebViewController ()<UIWebViewDelegate,UIActionSheetDelegate>
+@interface WebViewController ()<UIWebViewDelegate,UIActionSheetDelegate>{
+    NSString* otherName;
+    NSString* otherUrl;
+}
 @property(nonatomic,strong) UIWebView* webView;
 @end
 
@@ -36,7 +39,7 @@
 
 -(void)search:(UIButton*)btn{
 
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"选择跳转的三方" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"内置浏览器", @"淘宝",@"天猫", nil];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"选择跳转的三方" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"内置浏览器", otherName, nil];
     
     actionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
     [actionSheet showInView:self.view];
@@ -52,12 +55,7 @@
             break;
         case 1:
         {
-            [[UIApplication sharedApplication]openURL:[[NSString stringWithFormat:@"taobao://%@",_MYURL] safeUrlString]];
-        }
-            break;
-        case 2:
-        {
-            [[UIApplication sharedApplication]openURL:[[NSString stringWithFormat:@"tmall://%@",_MYURL] safeUrlString]];
+            [[UIApplication sharedApplication]openURL:[otherUrl safeUrlString]];
         }
             break;
         default:
@@ -65,11 +63,17 @@
     }
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 0) {
-//        [[UIApplication sharedApplication] openURL:_MYURL];
-    }else{
-        
+
+-(void)setOtherLink:(NSDictionary *)otherLink
+{
+    if (!otherLink) {
+        return;
+    }
+    _otherLink = otherLink;
+    otherUrl = [_otherLink objectForKey:@"app_link"];
+    otherName = [_otherLink objectForKey:@"app_name"];
+    if ([otherName isEqualToString:@""]) {
+        otherName = nil;
     }
 }
 

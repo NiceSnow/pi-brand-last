@@ -189,6 +189,7 @@
 {
     WebViewController* webVC = [[WebViewController alloc]init];
     webVC.MYURL = [_dict[@"res"][indexPath.row]objectForKey:@"url"];
+    webVC.otherLink = [_dict[@"res"][indexPath.row]objectForKey:@"link"];
     webVC.LeftCount = 2;
     [self.navigationController pushViewController:webVC animated:YES];
 

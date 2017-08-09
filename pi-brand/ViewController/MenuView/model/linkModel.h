@@ -13,4 +13,5 @@
 @property(nonatomic,copy) NSString* img;
 @property(nonatomic,copy) NSString* name;
 @property(nonatomic,copy) NSString* url;
+@property (nonatomic, strong) NSDictionary* link;
 @end
