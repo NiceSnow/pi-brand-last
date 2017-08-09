@@ -66,9 +66,12 @@
                 [self.tableView reloadData];
                 
             }
+        }else{
+            UIAlertView* aleart = [[UIAlertView alloc]initWithTitle:@"提示" message:@"没有查到结果，请尝试更换关键词！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
+            [aleart show];
         }
     } failed:^(NSURLSessionDataTask *task, NSError *error) {
-        UIAlertView* aleart = [[UIAlertView alloc]initWithTitle:@"提示" message:@"请输入正确的关键词" delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        UIAlertView* aleart = [[UIAlertView alloc]initWithTitle:@"提示" message:@"没有查到结果，请尝试更换关键词！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
         [aleart show];
     } netWork:^(BOOL netWork) {
         
@@ -198,7 +201,8 @@
     _tableView.rowHeight = UITableViewAutomaticDimension;
     _tableView.tableFooterView = [UIView new];
     _search.backgroundColor = [UIColor whiteColor];
-    _search.keyboardAppearance = UIReturnKeySearch;
+//    _search.keyboardAppearance = UIReturnKeySearch;
+    _search.returnKeyType = UIReturnKeySearch;
     _tableView.tableFooterView = self.footerView;
     [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/search_key" Parameter:@{@"search":_search.text} succeed:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
