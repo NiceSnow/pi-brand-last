@@ -14,5 +14,5 @@ typedef void(^tapButtonBlock)(NSInteger index);
 + (instancetype)createCellWithTableView:(UITableView *)tableView;
 @property (nonatomic, strong)NSDictionary * dict;
 @property (nonatomic, copy)tapButtonBlock  block;
-
+@property(nonatomic ,assign)NSInteger select;
 @end

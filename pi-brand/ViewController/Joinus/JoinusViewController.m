@@ -14,7 +14,9 @@
 #import "joinSubModel.h"
 #import "SearchViewController.h"
 
-@interface JoinusViewController ()<UITabBarDelegate,UITableViewDataSource>
+@interface JoinusViewController ()<UITabBarDelegate,UITableViewDataSource>{
+    NSInteger select;
+}
 @property (nonatomic, strong) UIView* titleView;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic, strong) UIImageView* backImageView;
@@ -182,8 +184,10 @@
             cell.dict = _jobDict;
         }
         __weak typeof(self)weakSelf = self;
+        cell.select = select;
         cell.block = ^(NSInteger index) {
             joinSubModel *model = weakSelf.dataArray[1][index];
+            select = index;
             [weakSelf getmessageWithJobID:model.m_id];
             
         };

@@ -18,6 +18,12 @@
 @end
 @implementation JoinusViewCell
 
+-(void)setSelect:(NSInteger)select{
+    _select = select;
+    UIImageView* imageView = [self.contentView viewWithTag:(_select+1+100)];
+    imageView.image  = [UIImage  imageNamed:[NSString stringWithFormat:@"icon_base%ld_sel",(_select+1)]];
+}
+
 + (instancetype)createCellWithTableView:(UITableView *)tableView
 {
     static NSString * iden = @"JoinusViewCell";
@@ -35,6 +41,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self = [[[NSBundle mainBundle]loadNibNamed:@"JoinusViewCell" owner:self options:nil]lastObject];
+        
     }
     return self;
 }

@@ -318,7 +318,7 @@
                                        MKLaunchOptionsShowsTrafficKey: [NSNumber numberWithBool:YES]}];
         
     }else if(indexPath.row == 1){
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",_dict[@"pro"][indexPath.section][@"tel"]]]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",_dict[@"pro"][indexPath.section][@"tel"]]]];
     }else if (indexPath.row ==2){
         
     }
