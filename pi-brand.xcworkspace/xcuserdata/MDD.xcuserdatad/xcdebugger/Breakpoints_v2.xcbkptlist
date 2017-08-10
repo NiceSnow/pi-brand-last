@@ -33,83 +33,6 @@
             endingLineNumber = "70"
             landmarkName = "-searchPress:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[SearchViewController searchPress:]"
-                  moduleName = "pi-brand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MDD/Documents/pi-brand-last/pi-brand/ViewController/Search/SearchViewController.m"
-                  timestampString = "523888281.396531"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "804">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__36-[SearchViewController searchPress:]_block_invoke"
-                  moduleName = "pi-brand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MDD/Documents/pi-brand-last/pi-brand/ViewController/Search/SearchViewController.m"
-                  timestampString = "523888281.397977"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "1088">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_"
-                  moduleName = "pi-brand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MDD/Documents/pi-brand-last/pi-brand/ViewController/Search/SearchViewController.m"
-                  timestampString = "523888281.399374"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_"
-                  moduleName = "pi-brand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MDD/Documents/pi-brand-last/pi-brand/ViewController/Search/SearchViewController.m"
-                  timestampString = "523888281.401269"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "64">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__36-[SearchViewController searchPress:]_block_invoke.73"
-                  moduleName = "pi-brand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MDD/Documents/pi-brand-last/pi-brand/ViewController/Search/SearchViewController.m"
-                  timestampString = "523888281.402894"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -134,46 +57,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "pi-brand/ViewController/MainView/MainViewController.m"
-            timestampString = "523889009.589483"
+            filePath = "pi-brand/ViewController/Product/Product1Cell.m"
+            timestampString = "524064181.16014"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "-getdata"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-setContentString:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__29-[MainViewController getdata]_block_invoke"
-                  moduleName = "pi-brand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MDD/Documents/pi-brand-last/pi-brand/ViewController/MainView/MainViewController.m"
-                  timestampString = "523889009.815648"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "1045">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__29-[MainViewController getdata]_block_invoke.152"
-                  moduleName = "pi-brand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MDD/Documents/pi-brand-last/pi-brand/ViewController/MainView/MainViewController.m"
-                  timestampString = "523889009.818647"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
