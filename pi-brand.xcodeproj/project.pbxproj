@@ -90,6 +90,17 @@
 		2DB773E81F2ECA7700F3FD6B /* shopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7739B1F2ECA7700F3FD6B /* shopViewController.m */; };
 		2DB773E91F2ECA7700F3FD6B /* shopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB7739C1F2ECA7700F3FD6B /* shopViewController.xib */; };
 		2DB773EA1F2ECA7700F3FD6B /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7739F1F2ECA7700F3FD6B /* WebViewController.m */; };
+		2DF071131F3D49A10053C681 /* EntranceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF071111F3D49A10053C681 /* EntranceTableViewCell.m */; };
+		2DF071141F3D49A10053C681 /* EntranceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF071121F3D49A10053C681 /* EntranceTableViewCell.xib */; };
+		2DF071181F3D62700053C681 /* WarehouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF071171F3D62700053C681 /* WarehouseViewController.m */; };
+		2DF0711C1F3D77680053C681 /* wareHouseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF0711A1F3D77680053C681 /* wareHouseTableViewCell.m */; };
+		2DF0711D1F3D77680053C681 /* wareHouseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF0711B1F3D77680053C681 /* wareHouseTableViewCell.xib */; };
+		2DF071201F3D90630053C681 /* GoodDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF0711F1F3D90630053C681 /* GoodDetailViewController.m */; };
+		2DF071241F3D92F00053C681 /* advertisementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF071221F3D92F00053C681 /* advertisementTableViewCell.m */; };
+		2DF071251F3D92F00053C681 /* advertisementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF071231F3D92F00053C681 /* advertisementTableViewCell.xib */; };
+		2DF071281F3DAF140053C681 /* GoodsListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF071271F3DAF140053C681 /* GoodsListView.m */; };
+		2DF0712C1F3DAF2C0053C681 /* GoodsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF0712A1F3DAF2C0053C681 /* GoodsListTableViewCell.m */; };
+		2DF0712D1F3DAF2C0053C681 /* GoodsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF0712B1F3DAF2C0053C681 /* GoodsListTableViewCell.xib */; };
 		60CCFE4F1F2F677300593335 /* shareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CCFE4E1F2F677300593335 /* shareModel.m */; };
 		60D4FFB31F333DF1003FB479 /* Londing.gif in Resources */ = {isa = PBXBuildFile; fileRef = 60D4FFB21F333DF1003FB479 /* Londing.gif */; };
 		60D4FFB71F338FB6003FB479 /* HotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D4FFB51F338FB6003FB479 /* HotTableViewCell.m */; };
@@ -268,6 +279,24 @@
 		2DB7739C1F2ECA7700F3FD6B /* shopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = shopViewController.xib; sourceTree = "<group>"; };
 		2DB7739E1F2ECA7700F3FD6B /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		2DB7739F1F2ECA7700F3FD6B /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		2DF071101F3D49A10053C681 /* EntranceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntranceTableViewCell.h; sourceTree = "<group>"; };
+		2DF071111F3D49A10053C681 /* EntranceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntranceTableViewCell.m; sourceTree = "<group>"; };
+		2DF071121F3D49A10053C681 /* EntranceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntranceTableViewCell.xib; sourceTree = "<group>"; };
+		2DF071161F3D62700053C681 /* WarehouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarehouseViewController.h; sourceTree = "<group>"; };
+		2DF071171F3D62700053C681 /* WarehouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarehouseViewController.m; sourceTree = "<group>"; };
+		2DF071191F3D77680053C681 /* wareHouseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wareHouseTableViewCell.h; sourceTree = "<group>"; };
+		2DF0711A1F3D77680053C681 /* wareHouseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wareHouseTableViewCell.m; sourceTree = "<group>"; };
+		2DF0711B1F3D77680053C681 /* wareHouseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = wareHouseTableViewCell.xib; sourceTree = "<group>"; };
+		2DF0711E1F3D90630053C681 /* GoodDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodDetailViewController.h; sourceTree = "<group>"; };
+		2DF0711F1F3D90630053C681 /* GoodDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodDetailViewController.m; sourceTree = "<group>"; };
+		2DF071211F3D92F00053C681 /* advertisementTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = advertisementTableViewCell.h; sourceTree = "<group>"; };
+		2DF071221F3D92F00053C681 /* advertisementTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = advertisementTableViewCell.m; sourceTree = "<group>"; };
+		2DF071231F3D92F00053C681 /* advertisementTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = advertisementTableViewCell.xib; sourceTree = "<group>"; };
+		2DF071261F3DAF140053C681 /* GoodsListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsListView.h; sourceTree = "<group>"; };
+		2DF071271F3DAF140053C681 /* GoodsListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsListView.m; sourceTree = "<group>"; };
+		2DF071291F3DAF2C0053C681 /* GoodsListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsListTableViewCell.h; sourceTree = "<group>"; };
+		2DF0712A1F3DAF2C0053C681 /* GoodsListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsListTableViewCell.m; sourceTree = "<group>"; };
+		2DF0712B1F3DAF2C0053C681 /* GoodsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsListTableViewCell.xib; sourceTree = "<group>"; };
 		43444C9FF1EBE1F22CC8AD7E /* Pods-pi-brand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pi-brand.release.xcconfig"; path = "Pods/Target Support Files/Pods-pi-brand/Pods-pi-brand.release.xcconfig"; sourceTree = "<group>"; };
 		60CCFE4D1F2F677300593335 /* shareModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shareModel.h; sourceTree = "<group>"; };
 		60CCFE4E1F2F677300593335 /* shareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shareModel.m; sourceTree = "<group>"; };
@@ -487,6 +516,7 @@
 		2DB773391F2ECA7700F3FD6B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2DF071151F3D617A0053C681 /* GoodsList */,
 				2D60637E1F3019D400A2A7C1 /* Newfeature */,
 				2DB7733A1F2ECA7700F3FD6B /* Active */,
 				2DB7733E1F2ECA7700F3FD6B /* Company */,
@@ -648,6 +678,9 @@
 				2DB7738C1F2ECA7700F3FD6B /* Product3TableViewController.m */,
 				2DB7738D1F2ECA7700F3FD6B /* ProductViewController.h */,
 				2DB7738E1F2ECA7700F3FD6B /* ProductViewController.m */,
+				2DF071101F3D49A10053C681 /* EntranceTableViewCell.h */,
+				2DF071111F3D49A10053C681 /* EntranceTableViewCell.m */,
+				2DF071121F3D49A10053C681 /* EntranceTableViewCell.xib */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -698,6 +731,28 @@
 				2DB7739F1F2ECA7700F3FD6B /* WebViewController.m */,
 			);
 			path = WebView;
+			sourceTree = "<group>";
+		};
+		2DF071151F3D617A0053C681 /* GoodsList */ = {
+			isa = PBXGroup;
+			children = (
+				2DF071161F3D62700053C681 /* WarehouseViewController.h */,
+				2DF071171F3D62700053C681 /* WarehouseViewController.m */,
+				2DF071191F3D77680053C681 /* wareHouseTableViewCell.h */,
+				2DF0711A1F3D77680053C681 /* wareHouseTableViewCell.m */,
+				2DF0711B1F3D77680053C681 /* wareHouseTableViewCell.xib */,
+				2DF0711E1F3D90630053C681 /* GoodDetailViewController.h */,
+				2DF0711F1F3D90630053C681 /* GoodDetailViewController.m */,
+				2DF071211F3D92F00053C681 /* advertisementTableViewCell.h */,
+				2DF071221F3D92F00053C681 /* advertisementTableViewCell.m */,
+				2DF071231F3D92F00053C681 /* advertisementTableViewCell.xib */,
+				2DF071261F3DAF140053C681 /* GoodsListView.h */,
+				2DF071271F3DAF140053C681 /* GoodsListView.m */,
+				2DF071291F3DAF2C0053C681 /* GoodsListTableViewCell.h */,
+				2DF0712A1F3DAF2C0053C681 /* GoodsListTableViewCell.m */,
+				2DF0712B1F3DAF2C0053C681 /* GoodsListTableViewCell.xib */,
+			);
+			path = GoodsList;
 			sourceTree = "<group>";
 		};
 		48D090732226B73B59FB04E8 /* Frameworks */ = {
@@ -834,7 +889,10 @@
 				2DB773C51F2ECA7700F3FD6B /* JoinusViewCell.xib in Resources */,
 				2DB773DA1F2ECA7700F3FD6B /* Product1Cell.xib in Resources */,
 				2DB773B91F2ECA7700F3FD6B /* ActiveTableViewCell.xib in Resources */,
+				2DF0711D1F3D77680053C681 /* wareHouseTableViewCell.xib in Resources */,
+				2DF071141F3D49A10053C681 /* EntranceTableViewCell.xib in Resources */,
 				2DB773BD1F2ECA7700F3FD6B /* CompanyHeaderTableViewCell.xib in Resources */,
+				2DF0712D1F3DAF2C0053C681 /* GoodsListTableViewCell.xib in Resources */,
 				2DB773B71F2ECA7700F3FD6B /* ActiveViewController.xib in Resources */,
 				2DB772DA1F2EC87200F3FD6B /* Assets.xcassets in Resources */,
 				2DB773E51F2ECA7700F3FD6B /* SearchTableViewCell.xib in Resources */,
@@ -848,6 +906,7 @@
 				2DB773DD1F2ECA7700F3FD6B /* Product2Cell.xib in Resources */,
 				2DB773C71F2ECA7700F3FD6B /* JoinusViewCellCell.xib in Resources */,
 				2DB773C91F2ECA7700F3FD6B /* JoinusViewController.xib in Resources */,
+				2DF071251F3D92F00053C681 /* advertisementTableViewCell.xib in Resources */,
 				2DB773BB1F2ECA7700F3FD6B /* companyContentTableViewCell.xib in Resources */,
 				60D4FFBD1F338FD1003FB479 /* HistoryTableViewCell.xib in Resources */,
 				2DB773E71F2ECA7700F3FD6B /* SearchViewController.xib in Resources */,
@@ -924,22 +983,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DB773C81F2ECA7700F3FD6B /* JoinusViewController.m in Sources */,
+				2DF071241F3D92F00053C681 /* advertisementTableViewCell.m in Sources */,
 				2DB773C01F2ECA7700F3FD6B /* companyHeaderModel.m in Sources */,
 				2DB773E21F2ECA7700F3FD6B /* ProductViewController.m in Sources */,
 				2DB773BE1F2ECA7700F3FD6B /* CompanyViewController.m in Sources */,
 				2DB773E61F2ECA7700F3FD6B /* SearchViewController.m in Sources */,
+				2DF071281F3DAF140053C681 /* GoodsListView.m in Sources */,
 				2DB773CA1F2ECA7700F3FD6B /* joinMainModel.m in Sources */,
 				2DB773A61F2ECA7700F3FD6B /* NSDictionary+extension.m in Sources */,
 				2DB773CC1F2ECA7700F3FD6B /* MainTableViewCell.m in Sources */,
 				2DB773B11F2ECA7700F3FD6B /* XLConst.m in Sources */,
 				2DB773D91F2ECA7700F3FD6B /* Product1Cell.m in Sources */,
 				2DB773B01F2ECA7700F3FD6B /* UIViewController+XLScroll.m in Sources */,
+				2DF0711C1F3D77680053C681 /* wareHouseTableViewCell.m in Sources */,
 				60D4FFBC1F338FD1003FB479 /* HistoryTableViewCell.m in Sources */,
 				2DB773AC1F2ECA7700F3FD6B /* HTTPRequest.m in Sources */,
 				2DB773B41F2ECA7700F3FD6B /* ShareView.m in Sources */,
 				60D4FFB71F338FB6003FB479 /* HotTableViewCell.m in Sources */,
 				2DB773AF1F2ECA7700F3FD6B /* XLSegmentBar.m in Sources */,
 				2DB773A41F2ECA7700F3FD6B /* NSData+extension.m in Sources */,
+				2DF071181F3D62700053C681 /* WarehouseViewController.m in Sources */,
 				2DB773AE1F2ECA7700F3FD6B /* NSString+XLSegmentModelPrtol.m in Sources */,
 				2DB773BA1F2ECA7700F3FD6B /* companyContentTableViewCell.m in Sources */,
 				2DB773B21F2ECA7700F3FD6B /* XLScrollView.m in Sources */,
@@ -960,6 +1023,7 @@
 				2DB773A81F2ECA7700F3FD6B /* UIButton+extension.m in Sources */,
 				2DB773AA1F2ECA7700F3FD6B /* UILabel+extension.m in Sources */,
 				2DB773E81F2ECA7700F3FD6B /* shopViewController.m in Sources */,
+				2DF071131F3D49A10053C681 /* EntranceTableViewCell.m in Sources */,
 				2DB773CE1F2ECA7700F3FD6B /* MainViewController.m in Sources */,
 				2DB773B61F2ECA7700F3FD6B /* ActiveViewController.m in Sources */,
 				2DB773A71F2ECA7700F3FD6B /* NSString+extension.m in Sources */,
@@ -968,11 +1032,13 @@
 				2DB773DB1F2ECA7700F3FD6B /* Product1TableViewController.m in Sources */,
 				2DB773C61F2ECA7700F3FD6B /* JoinusViewCellCell.m in Sources */,
 				2DB772D21F2EC87200F3FD6B /* AppDelegate.m in Sources */,
+				2DF071201F3D90630053C681 /* GoodDetailViewController.m in Sources */,
 				2DB773D01F2ECA7700F3FD6B /* mainModle.m in Sources */,
 				2DB773D81F2ECA7700F3FD6B /* lsitModel.m in Sources */,
 				2DB773DE1F2ECA7700F3FD6B /* Product2TableViewController.m in Sources */,
 				2DB773A91F2ECA7700F3FD6B /* UIImage+extension.m in Sources */,
 				2DB773B31F2ECA7700F3FD6B /* PickerView.m in Sources */,
+				2DF0712C1F3DAF2C0053C681 /* GoodsListTableViewCell.m in Sources */,
 				2DB773D71F2ECA7700F3FD6B /* linkModel.m in Sources */,
 				2D6063811F3019D400A2A7C1 /* NewFeatureVIew.m in Sources */,
 				2DB773A31F2ECA7700F3FD6B /* NSArray+extension.m in Sources */,

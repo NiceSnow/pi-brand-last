@@ -182,6 +182,8 @@
         JoinusViewCell * cell = [JoinusViewCell createCellWithTableView:tableView];
         if (_jobDict    ) {
             cell.dict = _jobDict;
+            joinMainModel* mainModel = [[_dataArray objectAtIndex:0] objectAtIndex:1];
+            cell.telephone = mainModel.telephone;
         }
         __weak typeof(self)weakSelf = self;
         cell.select = select;

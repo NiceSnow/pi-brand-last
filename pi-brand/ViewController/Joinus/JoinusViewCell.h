@@ -15,4 +15,5 @@ typedef void(^tapButtonBlock)(NSInteger index);
 @property (nonatomic, strong)NSDictionary * dict;
 @property (nonatomic, copy)tapButtonBlock  block;
 @property(nonatomic ,assign)NSInteger select;
+@property (nonatomic, copy) NSString* telephone;
 @end

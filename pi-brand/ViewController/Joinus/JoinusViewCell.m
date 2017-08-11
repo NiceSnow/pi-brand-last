@@ -18,6 +18,10 @@
 @end
 @implementation JoinusViewCell
 
+-(void)setTelephone:(NSString *)telephone{
+    _telephone = telephone;
+}
+
 -(void)setSelect:(NSInteger)select{
     _select = select;
     UIImageView* imageView = [self.contentView viewWithTag:(_select+1+100)];
@@ -60,6 +64,6 @@
 }
 - (IBAction)calButton:(UIButton *)sender {
     
-    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",_telephone]]];
 }
 @end

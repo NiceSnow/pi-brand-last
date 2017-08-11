@@ -9,9 +9,11 @@
 #import "Product1TableViewController.h"
 #import "UIViewController+XLScroll.h"
 #import "Product1Cell.h"
+#import "EntranceTableViewCell.h"
 #import <MapKit/MapKit.h>
 #import "ShareView.h"
 #import "shareModel.h"
+#import "WarehouseViewController.h"
 
 @interface Product1TableViewController ()
 {
@@ -43,6 +45,7 @@
 
     self.tableView.separatorStyle = 0;
     self.tableView.estimatedSectionHeaderHeight = 5;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.bounces = NO;
     self.tableView.alpha = 0;
     [self getdataWithCityID:10000];
@@ -89,7 +92,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 4;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -263,6 +266,12 @@
     
     return view;
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 3) {
+        return screenWidth/2*61/348 + 35;
+    }
+    return UITableViewAutomaticDimension;
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     if (section<[_dict[@"pro"] count]-1) {
@@ -278,6 +287,11 @@
     [UIView transitionWithView:_backImageView duration:during options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
         _backImageView.alpha = 1;
     } completion:nil];
+    if (indexPath.row == 3) {
+        EntranceTableViewCell *cell = [EntranceTableViewCell createCellWithTableView:tableView];
+        
+        return cell;
+    }
     Product1Cell *cell = [Product1Cell createCellWithTableView:tableView];
     if (_dict) {
         NSString * content = nil;
@@ -292,18 +306,18 @@
         
     }
     cell.imageString = self.imageArray[indexPath.row];
-    if (indexPath.row == 2) {
-        cell.row.hidden = YES;
-    }
-    if (indexPath.section == [_dict[@"pro"] count]-1) {
-        if (indexPath.row == 2) {
-            cell.lineView.hidden = YES;
-        }else{
-            cell.lineView.hidden = NO;
-        }
-    }else{
-        cell.lineView.hidden = NO;
-    }
+//    if (indexPath.row == 2) {
+//        cell.row.hidden = YES;
+//    }
+//    if (indexPath.section == [_dict[@"pro"] count]-1) {
+//        if (indexPath.row == 2) {
+//            cell.lineView.hidden = YES;
+//        }else{
+//            cell.lineView.hidden = NO;
+//        }
+//    }else{
+//        cell.lineView.hidden = NO;
+//    }
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -317,13 +331,22 @@
                                        MKLaunchOptionsShowsTrafficKey: [NSNumber numberWithBool:YES]}];
         
     }else if(indexPath.row == 1){
-//        NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"tel:%@",_dict[@"pro"][indexPath.section][@"tel"]];
-//        UIWebView * callWebview = [[UIWebView alloc] init];
-//        [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
-//        [self.view addSubview:callWebview];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",_dict[@"pro"][indexPath.section][@"tel"]]]];
-    }else if (indexPath.row ==2){
-        
+    }else if (indexPath.row == 3){
+        [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/goods_shelves_list" Parameter:@{@"c_id":_dict[@"pro"][indexPath.section][@"c_id"]} succeed:^(NSURLSessionDataTask *task, id responseObject) {
+            BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
+            if (succeed) {
+                NSArray* dataArray = [responseObject objectForKey:@"data"];
+                WarehouseViewController* VC = [[WarehouseViewController alloc]init];
+                VC.dataArray = dataArray;
+                VC.c_id = _dict[@"pro"][indexPath.section][@"c_id"];
+                [self.navigationController pushViewController:VC animated:YES];
+            }
+        } failed:^(NSURLSessionDataTask *task, NSError *error) {
+            
+        } netWork:^(BOOL netWork) {
+            
+        }];
     }
     
     
