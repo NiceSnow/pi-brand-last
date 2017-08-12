@@ -57,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "pi-brand/ViewController/Product/Product1Cell.m"
-            timestampString = "524064181.16014"
+            filePath = "pi-brand/ViewController/GoodsList/GoodsListView.m"
+            timestampString = "524218713.757173"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "-setContentString:"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "-setHiddenView:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

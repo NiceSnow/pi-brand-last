@@ -10,4 +10,5 @@
 
 @interface GoodsListView : UIView
 @property (nonatomic, strong) NSArray* dataArray;
+@property(nonatomic,assign) BOOL hiddenView;
 @end

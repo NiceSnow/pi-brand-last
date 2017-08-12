@@ -19,6 +19,7 @@
 @implementation WarehouseViewController
 
 -(void)btnPress:(UIButton*)btn{
+    [HUDView showHUD:self];
     [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/CityGoodsList" Parameter:@{@"c_id":_c_id,
                                     @"s_id":[_dataArray[btn.tag] objectForKey:@"id"]
                                     } succeed:^(NSURLSessionDataTask *task, id responseObject) {
@@ -27,7 +28,8 @@
             NSArray* dataArray = [responseObject objectForKey:@"data"];
             GoodDetailViewController* VC = [[GoodDetailViewController alloc]init];
             VC.dataArray = dataArray;
-            [self.navigationController pushViewController:VC animated:YES];
+            [HUDView hiddenHUD];
+            [self.navigationController pushViewController:VC animated:NO];
         }
     } failed:^(NSURLSessionDataTask *task, NSError *error) {
         

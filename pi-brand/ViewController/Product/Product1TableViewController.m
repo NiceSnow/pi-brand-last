@@ -333,6 +333,7 @@
     }else if(indexPath.row == 1){
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",_dict[@"pro"][indexPath.section][@"tel"]]]];
     }else if (indexPath.row == 3){
+        [HUDView showHUD:self];
         [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/goods_shelves_list" Parameter:@{@"c_id":_dict[@"pro"][indexPath.section][@"c_id"]} succeed:^(NSURLSessionDataTask *task, id responseObject) {
             BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
             if (succeed) {
@@ -340,6 +341,7 @@
                 WarehouseViewController* VC = [[WarehouseViewController alloc]init];
                 VC.dataArray = dataArray;
                 VC.c_id = _dict[@"pro"][indexPath.section][@"c_id"];
+                [HUDView hiddenHUD];
                 [self.navigationController pushViewController:VC animated:YES];
             }
         } failed:^(NSURLSessionDataTask *task, NSError *error) {

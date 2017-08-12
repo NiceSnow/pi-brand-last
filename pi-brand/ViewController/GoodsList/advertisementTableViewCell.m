@@ -19,7 +19,7 @@
 -(void)setImageString:(NSString *)imageString{
     [self.AdImageView sd_setImageWithURL:[imageString safeUrlString] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         [UIView transitionWithView:self.AdImageView duration:during options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-            CGSize imageSize = image.size;
+//            CGSize imageSize = image.size;
             self.AdImageView.alpha = 1;
         } completion:nil];
     }];
