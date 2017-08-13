@@ -57,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "pi-brand/ViewController/GoodsList/GoodsListView.m"
-            timestampString = "524218713.757173"
+            filePath = "pi-brand/ViewController/GoodsList/GoodDetailViewController.m"
+            timestampString = "524297691.009606"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "-setHiddenView:"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "-scrollViewDidScroll:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

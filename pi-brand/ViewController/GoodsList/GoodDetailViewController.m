@@ -11,7 +11,7 @@
 #import "GoodsListView.h"
 #import "SearchViewController.h"
 
-#define tableViewW screenWidth*5/7
+#define tableViewW (screenWidth )
 
 @interface GoodDetailViewController ()<UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate>{
     CGFloat width;
@@ -38,8 +38,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"货架展示";
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/advert_list" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
@@ -119,6 +119,7 @@
             } completion:^(BOOL finished) {
                 self.tableView.alpha = 0;
             }];
+            [self.navigationController setNavigationBarHidden:NO animated:YES];
         }
         if(dx<-85) {
             DebugLog(@"right");
@@ -128,6 +129,7 @@
                 self.ListView.frame = CGRectMake(-tableViewW, 0, screenWidth, screenHeight);
             }];
             self.tableView.alpha = 1;
+            [self.navigationController setNavigationBarHidden:YES animated:YES];
         }
         
     }
@@ -150,7 +152,8 @@
 
 -(UITableView *)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(screenWidth - tableViewW, 0, tableViewW, screenHeight) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, tableViewW, screenHeight) style:UITableViewStylePlain];
+        _tableView.backgroundColor = [UIColor blackColor];
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.estimatedRowHeight = 5;
         _tableView.rowHeight = UITableViewAutomaticDimension;
@@ -158,8 +161,24 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.alpha = 0;
+        _tableView.separatorStyle = 0;
+        _tableView.bounces = NO;
+        _tableView.pagingEnabled = YES;
     }
     return _tableView;
+}
+//-(BOOL)prefersStatusBarHidden
+//
+//{
+//    
+//    return YES;// 返回YES表示隐藏，返回NO表示显示
+//    
+//}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView;{
+//    CGFloat offset = scrollView.contentOffset.y/screenHeight;
+//    NSInteger cell = ceilf(offset);
+//    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:cell inSection:0]  atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
 -(GoodsListView *)ListView{
