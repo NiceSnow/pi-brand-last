@@ -10,4 +10,6 @@
 
 @interface GoodDetailViewController : UIViewController
 @property (nonatomic, strong) NSArray* dataArray;
+@property(nonatomic,copy)NSString* c_id;
+@property(nonatomic,copy)NSString* s_id;
 @end

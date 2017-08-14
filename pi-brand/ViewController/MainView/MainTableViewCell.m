@@ -53,8 +53,8 @@
     if (self) {
         self = [[[NSBundle mainBundle]loadNibNamed:@"MainTableViewCell" owner:self options:nil]lastObject];
         [_titleImage mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_equalTo((screenWidth-40)*4/5);
-            make.height.mas_equalTo((screenWidth-40)*4/5*105/232);
+            make.width.mas_equalTo((screenWidth-90)*4/5);
+            make.height.mas_equalTo((screenWidth-90)*4/5*105/232);
         }];
         [_mainImage mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.mas_equalTo(screenWidth-50);

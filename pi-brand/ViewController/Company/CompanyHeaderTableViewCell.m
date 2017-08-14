@@ -47,8 +47,8 @@
     if (self) {
         self = [[[NSBundle mainBundle]loadNibNamed:@"CompanyHeaderTableViewCell" owner:self options:nil]lastObject];
             [_img mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_equalTo((screenWidth-20)/2);
-            make.height.mas_equalTo((screenWidth-20)/2*77.53/180);
+            make.width.mas_equalTo((screenWidth-90)*4/5);
+            make.height.mas_equalTo((screenWidth-90)*4/5*105/232);
         }];
         _img.alpha = 0;
     }

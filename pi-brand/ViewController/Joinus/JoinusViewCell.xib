@@ -29,8 +29,8 @@
                                 <color key="textColor" red="0.58431372550000005" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="harmy@postermaster.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eG-vM-kaE">
-                                <rect key="frame" x="15" y="57" width="170" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="harmayhr@harmay.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eG-vM-kaE">
+                                <rect key="frame" x="15" y="57" width="152.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -184,8 +184,12 @@
                                     <action selector="btn1:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9A2-4o-6wg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEk-j2-kfW">
-                                <rect key="frame" x="531" y="18.5" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEk-j2-kfW">
+                                <rect key="frame" x="509" y="19" width="56" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="ZSv-Lh-e61"/>
+                                    <constraint firstAttribute="width" constant="60" id="mk0-Fq-92x"/>
+                                </constraints>
                                 <connections>
                                     <action selector="calButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1Mt-aY-i3k"/>
                                 </connections>
@@ -259,12 +263,11 @@
                             <constraint firstItem="rJd-3T-Brt" firstAttribute="leading" secondItem="66T-cg-uXn" secondAttribute="leading" id="iMO-Zh-vPc"/>
                             <constraint firstItem="rJd-3T-Brt" firstAttribute="trailing" secondItem="66T-cg-uXn" secondAttribute="trailing" id="iOs-bT-S0R"/>
                             <constraint firstItem="GBB-2d-CSy" firstAttribute="leading" secondItem="Xjv-UX-eY2" secondAttribute="leading" id="kOd-Vd-GjH"/>
-                            <constraint firstItem="8eG-vM-kaE" firstAttribute="top" secondItem="1A7-YW-PRa" secondAttribute="bottom" constant="15" id="myM-CS-oVe"/>
+                            <constraint firstItem="8eG-vM-kaE" firstAttribute="top" secondItem="1A7-YW-PRa" secondAttribute="bottom" constant="10" id="myM-CS-oVe"/>
                             <constraint firstItem="Y2a-g5-Xmg" firstAttribute="bottom" secondItem="i3h-xF-Iiz" secondAttribute="bottom" id="nN6-mY-7qw"/>
                             <constraint firstItem="eCa-4v-yew" firstAttribute="bottom" secondItem="oTZ-lo-Bod" secondAttribute="bottom" id="nji-tq-5k4"/>
                             <constraint firstItem="rJd-3T-Brt" firstAttribute="bottom" secondItem="66T-cg-uXn" secondAttribute="bottom" id="ohH-bm-WdP"/>
                             <constraint firstItem="vTF-16-SGB" firstAttribute="top" secondItem="ik6-2V-5jz" secondAttribute="bottom" constant="5" id="pEz-MP-Uee"/>
-                            <constraint firstItem="CEk-j2-kfW" firstAttribute="centerY" secondItem="1A7-YW-PRa" secondAttribute="centerY" id="rEe-LG-RLx"/>
                             <constraint firstItem="Cin-1d-zjk" firstAttribute="centerX" secondItem="N30-Zd-RB1" secondAttribute="centerX" id="sR8-mK-cwW"/>
                             <constraint firstItem="Cin-1d-zjk" firstAttribute="bottom" secondItem="MHk-qv-OI8" secondAttribute="bottom" id="sRN-gI-IYD"/>
                             <constraint firstItem="OyG-Fm-Xsa" firstAttribute="centerX" secondItem="glu-Qn-nlk" secondAttribute="centerX" id="sTm-O0-FXb"/>

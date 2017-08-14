@@ -19,23 +19,27 @@
 @implementation WarehouseViewController
 
 -(void)btnPress:(UIButton*)btn{
-    [HUDView showHUD:self];
-    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/CityGoodsList" Parameter:@{@"c_id":_c_id,
-                                    @"s_id":[_dataArray[btn.tag] objectForKey:@"id"]
-                                    } succeed:^(NSURLSessionDataTask *task, id responseObject) {
-        BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
-        if (succeed) {
-            NSArray* dataArray = [responseObject objectForKey:@"data"];
-            GoodDetailViewController* VC = [[GoodDetailViewController alloc]init];
-            VC.dataArray = dataArray;
-            [HUDView hiddenHUD];
-            [self.navigationController pushViewController:VC animated:NO];
-        }
-    } failed:^(NSURLSessionDataTask *task, NSError *error) {
-        
-    } netWork:^(BOOL netWork) {
-        
-    }];
+    GoodDetailViewController* VC = [[GoodDetailViewController alloc]init];
+    VC.c_id = _c_id;
+    VC.s_id = [_dataArray[btn.tag] objectForKey:@"id"];
+    [self.navigationController pushViewController:VC animated:NO];
+//    [HUDView showHUD:self];
+//    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/CityGoodsList" Parameter:@{@"c_id":_c_id,
+//                                    @"s_id":[_dataArray[btn.tag] objectForKey:@"id"]
+//                                    } succeed:^(NSURLSessionDataTask *task, id responseObject) {
+//        BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
+//        if (succeed) {
+//            NSArray* dataArray = [responseObject objectForKey:@"data"];
+//            GoodDetailViewController* VC = [[GoodDetailViewController alloc]init];
+//            VC.dataArray = dataArray;
+//            [HUDView hiddenHUD];
+//            [self.navigationController pushViewController:VC animated:NO];
+//        }
+//    } failed:^(NSURLSessionDataTask *task, NSError *error) {
+//        
+//    } netWork:^(BOOL netWork) {
+//        
+//    }];
 }
 
 -(void)setDataArray:(NSArray *)dataArray{

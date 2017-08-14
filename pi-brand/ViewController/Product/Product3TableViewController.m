@@ -105,8 +105,8 @@
         make.centerX.equalTo(backView);
         make.top.equalTo(logoImageView.mas_bottom).offset(25);
         make.bottom.mas_equalTo(-5);
-        make.width.mas_equalTo((screenWidth-20)/2);
-        make.height.mas_equalTo((screenWidth-20)/2*77.53/180);
+        make.width.mas_equalTo((screenWidth-90)*4/5);
+        make.height.mas_equalTo((screenWidth-90)*4/5*105/232);
     }];
     
 

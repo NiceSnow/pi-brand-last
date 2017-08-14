@@ -101,6 +101,7 @@
 		2DF071281F3DAF140053C681 /* GoodsListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF071271F3DAF140053C681 /* GoodsListView.m */; };
 		2DF0712C1F3DAF2C0053C681 /* GoodsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF0712A1F3DAF2C0053C681 /* GoodsListTableViewCell.m */; };
 		2DF0712D1F3DAF2C0053C681 /* GoodsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF0712B1F3DAF2C0053C681 /* GoodsListTableViewCell.xib */; };
+		605C0D2E1F41E8AB00906E80 /* ADVICEView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C0D2D1F41E8AB00906E80 /* ADVICEView.m */; };
 		60CCFE4F1F2F677300593335 /* shareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CCFE4E1F2F677300593335 /* shareModel.m */; };
 		60D4FFB31F333DF1003FB479 /* Londing.gif in Resources */ = {isa = PBXBuildFile; fileRef = 60D4FFB21F333DF1003FB479 /* Londing.gif */; };
 		60D4FFB71F338FB6003FB479 /* HotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D4FFB51F338FB6003FB479 /* HotTableViewCell.m */; };
@@ -298,6 +299,8 @@
 		2DF0712A1F3DAF2C0053C681 /* GoodsListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsListTableViewCell.m; sourceTree = "<group>"; };
 		2DF0712B1F3DAF2C0053C681 /* GoodsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsListTableViewCell.xib; sourceTree = "<group>"; };
 		43444C9FF1EBE1F22CC8AD7E /* Pods-pi-brand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pi-brand.release.xcconfig"; path = "Pods/Target Support Files/Pods-pi-brand/Pods-pi-brand.release.xcconfig"; sourceTree = "<group>"; };
+		605C0D2C1F41E8AB00906E80 /* ADVICEView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADVICEView.h; sourceTree = "<group>"; };
+		605C0D2D1F41E8AB00906E80 /* ADVICEView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADVICEView.m; sourceTree = "<group>"; };
 		60CCFE4D1F2F677300593335 /* shareModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shareModel.h; sourceTree = "<group>"; };
 		60CCFE4E1F2F677300593335 /* shareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shareModel.m; sourceTree = "<group>"; };
 		60D4FFB21F333DF1003FB479 /* Londing.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Londing.gif; sourceTree = "<group>"; };
@@ -342,6 +345,8 @@
 			children = (
 				2D60637F1F3019D400A2A7C1 /* NewFeatureVIew.h */,
 				2D6063801F3019D400A2A7C1 /* NewFeatureVIew.m */,
+				605C0D2C1F41E8AB00906E80 /* ADVICEView.h */,
+				605C0D2D1F41E8AB00906E80 /* ADVICEView.m */,
 			);
 			path = Newfeature;
 			sourceTree = "<group>";
@@ -985,6 +990,7 @@
 				2DB773C81F2ECA7700F3FD6B /* JoinusViewController.m in Sources */,
 				2DF071241F3D92F00053C681 /* advertisementTableViewCell.m in Sources */,
 				2DB773C01F2ECA7700F3FD6B /* companyHeaderModel.m in Sources */,
+				605C0D2E1F41E8AB00906E80 /* ADVICEView.m in Sources */,
 				2DB773E21F2ECA7700F3FD6B /* ProductViewController.m in Sources */,
 				2DB773BE1F2ECA7700F3FD6B /* CompanyViewController.m in Sources */,
 				2DB773E61F2ECA7700F3FD6B /* SearchViewController.m in Sources */,

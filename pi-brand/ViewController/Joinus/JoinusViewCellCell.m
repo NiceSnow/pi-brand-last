@@ -47,8 +47,8 @@
         }];
         
         [_iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo((screenWidth-40)*4/5);
-        make.height.mas_equalTo((screenWidth-40)*4/5*105/232);
+            make.width.mas_equalTo((screenWidth-90)*4/5);
+            make.height.mas_equalTo((screenWidth-90)*4/5*105/232);
         }];
     
         [_mainImageView mas_makeConstraints:^(MASConstraintMaker *make) {

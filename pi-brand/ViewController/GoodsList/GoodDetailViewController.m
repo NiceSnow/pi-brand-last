@@ -10,6 +10,7 @@
 #import "advertisementTableViewCell.h"
 #import "GoodsListView.h"
 #import "SearchViewController.h"
+#import "ADVICEView.h"
 
 #define tableViewW (screenWidth )
 
@@ -23,9 +24,17 @@
 @property(nonatomic,assign) CGPoint startLocation;
 @property(nonatomic,assign) CGPoint stopLocation;
 @property(nonatomic,strong) UIButton* backBtn;
+@property(nonatomic,strong) ADVICEView* ADView;
 @end
 
 @implementation GoodDetailViewController
+
+-(void)setC_id:(NSString *)c_id{
+    _c_id = c_id;
+}
+-(void)setS_id:(NSString *)s_id{
+    _s_id = s_id;
+}
 
 -(void)setDataArray:(NSArray *)dataArray{
     _dataArray = dataArray;
@@ -40,22 +49,29 @@
     [super viewDidLoad];
     self.title = @"货架展示";
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.tableView];
-    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/advert_list" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
+//    [self.view addSubview:self.tableView];
+    [HUDView showHUD:self];
+    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/advert_list" Parameter:@{@"c_id":@"22",@"s_id":@"2"} succeed:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
         if (succeed) {
             NSArray* data = [responseObject objectForKey:@"data"];
             width = [[responseObject objectForKey:@"width"] floatValue];
             height = [[responseObject objectForKey:@"height"] floatValue];
             _AdArray = data;
-            [self.tableView reloadData];
+            if (data.count>0) {
+                self.ADView.dataArray = data;
+                [self.view addSubview:self.ADView];
+                [HUDView hiddenHUD];
+            }
+//            tianjia scrollView;
+//            [self.tableView reloadData];
         }
     } failed:^(NSURLSessionDataTask *task, NSError *error) {
         
     } netWork:^(BOOL netWork) {
         
     }];
-    [self.view addSubview:self.ListView];
+//    [self.view addSubview:self.ListView];
     
     UIPanGestureRecognizer * recognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipeFrom:)];
     recognizer.delegate = self;
@@ -79,11 +95,11 @@
     [rightBtn2 addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc]initWithCustomView:rightBtn],[[UIBarButtonItem alloc]initWithCustomView:rightBtn2]];
     // Do any additional setup after loading the view.
-    [self.view addSubview:self.backBtn];
-    [self.backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.mas_equalTo(self.view);
-        make.right.offset(0);
-    }];
+//    [self.view addSubview:self.backBtn];
+//    [self.backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerY.mas_equalTo(self.view);
+//        make.right.offset(0);
+//    }];
 }
 
 -(void)search{
@@ -93,7 +109,7 @@
 -(void)leftPress{
     [UIView transitionWithView:self.ListView duration:tableViewDuring options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
         self.ListView.alpha = 0;
-        self.tableView.alpha = 0;
+//        self.tableView.alpha = 0;
     } completion:^(BOOL finished) {
         [self.navigationController popViewControllerAnimated:NO];
     }];
@@ -117,9 +133,9 @@
             [UIView animateWithDuration:0.3 animations:^{
                 self.ListView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
             } completion:^(BOOL finished) {
-                self.tableView.alpha = 0;
+//                self.tableView.alpha = 0;
             }];
-            [self.navigationController setNavigationBarHidden:NO animated:YES];
+//            [self.navigationController setNavigationBarHidden:NO animated:YES];
         }
         if(dx<-85) {
             DebugLog(@"right");
@@ -128,8 +144,8 @@
             [UIView animateWithDuration:0.3 animations:^{
                 self.ListView.frame = CGRectMake(-tableViewW, 0, screenWidth, screenHeight);
             }];
-            self.tableView.alpha = 1;
-            [self.navigationController setNavigationBarHidden:YES animated:YES];
+//            self.tableView.alpha = 1;
+//            [self.navigationController setNavigationBarHidden:YES animated:YES];
         }
         
     }
@@ -160,7 +176,7 @@
         _tableView.tableFooterView = [UIView new];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.alpha = 0;
+//        _tableView.alpha = 0;
         _tableView.separatorStyle = 0;
         _tableView.bounces = NO;
         _tableView.pagingEnabled = YES;
@@ -201,6 +217,13 @@
         [_backBtn setBackgroundImage:[UIImage imageNamed:@"backShow"] forState:normal];
     }
     return _backBtn;
+}
+
+-(ADVICEView *)ADView{
+    if (!_ADView) {
+        _ADView = [[ADVICEView alloc]initWithFrame:CGRectMake(0, 64, screenWidth, screenHeight -64)];
+    }
+    return _ADView;
 }
 
 /*
