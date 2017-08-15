@@ -128,6 +128,9 @@
             btn.tag = i;
             [btn addTarget:self action:@selector(btnPress:) forControlEvents:UIControlEventTouchUpInside];
         }
+    if (_dataArray.count == 1) {
+        count = 1;
+    }
     _footerView.frame = CGRectMake(0, 0, screenWidth, (height+Width_Space)*count + Width_Space);
     return _footerView;
 }

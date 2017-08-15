@@ -51,7 +51,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
 //    [self.view addSubview:self.tableView];
     [HUDView showHUD:self];
-    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/advert_list" Parameter:@{@"c_id":@"22",@"s_id":@"2"} succeed:^(NSURLSessionDataTask *task, id responseObject) {
+    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/advert_list" Parameter:@{@"c_id":_c_id,@"s_id":_s_id} succeed:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
         if (succeed) {
             NSArray* data = [responseObject objectForKey:@"data"];
@@ -61,8 +61,8 @@
             if (data.count>0) {
                 self.ADView.dataArray = data;
                 [self.view addSubview:self.ADView];
-                [HUDView hiddenHUD];
             }
+            [HUDView hiddenHUD];
 //            tianjia scrollView;
 //            [self.tableView reloadData];
         }
