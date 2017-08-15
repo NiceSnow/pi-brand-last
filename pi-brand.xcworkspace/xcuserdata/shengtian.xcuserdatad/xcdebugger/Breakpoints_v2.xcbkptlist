@@ -74,7 +74,7 @@
                   moduleName = "pi-brand"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guojinghan/Documents/pi-brand-last/pi-brand/ViewController/GoodsList/GoodDetailViewController.m"
-                  timestampString = "524468449.790078"
+                  timestampString = "524473315.500409"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "54"
@@ -89,7 +89,7 @@
                   moduleName = "pi-brand"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guojinghan/Documents/pi-brand-last/pi-brand/ViewController/GoodsList/GoodDetailViewController.m"
-                  timestampString = "524468449.791533"
+                  timestampString = "524473315.501726"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "55"
@@ -144,6 +144,86 @@
             startingLineNumber = "134"
             endingLineNumber = "134"
             landmarkName = "-footerView"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pi-brand/ViewController/Search/SearchViewController.m"
+            timestampString = "524473259.592906"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "-searchPress:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SearchViewController searchPress:]"
+                  moduleName = "pi-brand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guojinghan/Documents/pi-brand-last/pi-brand/ViewController/Search/SearchViewController.m"
+                  timestampString = "524473315.512861"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "556">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__36-[SearchViewController searchPress:]_block_invoke"
+                  moduleName = "pi-brand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guojinghan/Documents/pi-brand-last/pi-brand/ViewController/Search/SearchViewController.m"
+                  timestampString = "524473315.514191"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pi-brand/ViewController/Search/SearchViewController.m"
+            timestampString = "524473324.541262"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-searchPress:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pi-brand/ViewController/Search/SearchViewController.m"
+            timestampString = "524473486.831701"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-searchPress:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

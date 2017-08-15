@@ -54,17 +54,20 @@
                 return @{@"ID" : @"id"};
             }];
             self.dataArray = [searchModel mj_objectArrayWithKeyValuesArray:dataArr];
-            if (self.dataArray) {
+            if (self.dataArray.count>0) {
                 if (self.historyArray.count<6) {
-                    [self.historyArray addObject:string];
+                    [self.historyArray addObject:[string stringByReplacingOccurrencesOfString:@" " withString:@""]];
                 }else{
                     [self.historyArray removeObjectAtIndex:0];
-                    [self.historyArray addObject:string];
+                    [self.historyArray addObject:[string stringByReplacingOccurrencesOfString:@" " withString:@""]];
                 }
                 [UserDefault setObject:self.historyArray forKey:@"history"];
                 [UserDefault synchronize];
                 [self.tableView reloadData];
                 
+            }else{
+                UIAlertView* aleart = [[UIAlertView alloc]initWithTitle:@"提示" message:@"没有查到结果，请尝试更换关键词！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                [aleart show];
             }
         }else{
             UIAlertView* aleart = [[UIAlertView alloc]initWithTitle:@"提示" message:@"没有查到结果，请尝试更换关键词！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
