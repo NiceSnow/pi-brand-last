@@ -8,8 +8,9 @@
 
 #import "WarehouseViewController.h"
 #import "GoodDetailViewController.h"
+#import "wareHouseTableViewCell.h"
 
-@interface WarehouseViewController ()
+@interface WarehouseViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong) UITableView* tableView;
 @property (nonatomic, strong) UIView* footerView;
 
@@ -42,8 +43,27 @@
 //    }];
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    GoodDetailViewController* VC = [[GoodDetailViewController alloc]init];
+    VC.c_id = _c_id;
+    VC.s_id = [_dataArray[indexPath.row] objectForKey:@"id"];
+    [self.navigationController pushViewController:VC animated:NO];
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _dataArray.count;
+}
+
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    wareHouseTableViewCell* cell = [wareHouseTableViewCell createCellWithTableView:tableView];
+    [cell updataCellWithString:[_dataArray[indexPath.row] objectForKey:@"shelves_name"]];
+    cell.selectionStyle = 0;
+    return cell;
+}
+
 -(void)setDataArray:(NSArray *)dataArray{
     _dataArray = dataArray;
+    [self.tableView reloadData];
 }
 
 -(void)setC_id:(NSString *)c_id{
@@ -57,7 +77,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"筛选";
+    self.title = @"所有货架";
     UIButton* leftBtn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
     leftBtn2.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [leftBtn2 setImage:[UIImage imageNamed:@"back"] forState:normal];
@@ -65,10 +85,6 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn2];
     [self.view addSubview:self.tableView];
     // Do any additional setup after loading the view.
-}
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 0;
 }
 
 -(UIView *)headerView{
@@ -93,15 +109,21 @@
     if (!_tableView) {
         _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight) style:UITableViewStylePlain];
         _tableView.backgroundColor = [UIColor clearColor];
-        _tableView.separatorColor = [UIColor clearColor];
+        _tableView.separatorColor = UICOLOR_RGB_Alpha(0xd8d8d8, 1);
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.estimatedRowHeight = 5;
         _tableView.rowHeight = UITableViewAutomaticDimension;
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
         _tableView.tableFooterView = [UIView new];
-        _tableView.tableHeaderView = self.headerView;
-        _tableView.tableFooterView = self.footerView;
-        
-        
+        if ([_tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+            [_tableView setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+        }
+        if ([_tableView respondsToSelector:@selector(setLayoutMargins:)]) {
+            [_tableView setLayoutMargins:UIEdgeInsetsMake(0, 0, 0, 0)];
+        }
+//        _tableView.tableHeaderView = self.headerView;
+//        _tableView.tableFooterView = self.footerView;
     }
     return _tableView;
 }

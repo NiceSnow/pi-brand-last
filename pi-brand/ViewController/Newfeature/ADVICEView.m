@@ -7,6 +7,7 @@
 //
 
 #import "ADVICEView.h"
+#import "UIView+ViewController.h"
 
 @interface ADVICEView ()<UIScrollViewDelegate,UIGestureRecognizerDelegate,UITableViewDelegate,UITableViewDataSource>{
     UIScrollView *_scroll;
@@ -26,7 +27,7 @@
     _cont = _dataArray.count;
     [self addScrollView];
     [self addScrollTableView];
-    [self addbtn];
+//    [self addbtn];
 }
 
 -(instancetype)initWithFrame:(CGRect)frame{
@@ -36,6 +37,8 @@
         UIPanGestureRecognizer * recognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipeFrom:)];
         recognizer.delegate = self;
         [self addGestureRecognizer:recognizer];
+        UIButton* rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
+        self.ViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
     }
     return self;
 }
@@ -132,10 +135,14 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    if (scrollView.contentOffset.y>=0) {
-        return;
-    }
+    NSLog(@"x == %f",scrollView.contentOffset.x);
+    NSLog(@"y == %f",scrollView.contentOffset.y);
     NSInteger page = scrollView.contentOffset.x / screenWidth;
+    if (scrollView.contentOffset.x!=0&&scrollView.contentOffset.y == 0) {
+        [self.delegate returnIndex:page];
+        self.ViewController.title = _dataArray[page][@"name"];
+    }
+    
 //    NSLog(@"%f",scrollView.contentOffset.y);
 //    if (page == 0) {
 //        _btn1.hidden = YES;

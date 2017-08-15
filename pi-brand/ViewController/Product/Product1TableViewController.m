@@ -40,8 +40,8 @@
     [self setupScroll];
    
     self.tableView.backgroundColor = [UIColor clearColor];
-    _imageArray = [@[@"19_base1",@"23_base1",@"27_base1"] mutableCopy];
-    _titleArray = [@[@"上海安福路308号",@"店铺电话：13661138037",@"营业时间10：00-22：00"] mutableCopy];
+    _imageArray = [@[@"19_base1",@"23_base1",@"27_base1",@"enter"] mutableCopy];
+    _titleArray = [@[@"上海安福路308号",@"店铺电话:13661138037",@"营业时间:10:00-22:00"] mutableCopy];
 
     self.tableView.separatorStyle = 0;
     self.tableView.estimatedSectionHeaderHeight = 5;
@@ -267,9 +267,6 @@
     return view;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 3) {
-        return screenWidth/2*61/348 + 35;
-    }
     return UITableViewAutomaticDimension;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
@@ -287,11 +284,11 @@
     [UIView transitionWithView:_backImageView duration:during options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
         _backImageView.alpha = 1;
     } completion:nil];
-    if (indexPath.row == 3) {
-        EntranceTableViewCell *cell = [EntranceTableViewCell createCellWithTableView:tableView];
-        
-        return cell;
-    }
+//    if (indexPath.row == 3) {
+//        EntranceTableViewCell *cell = [EntranceTableViewCell createCellWithTableView:tableView];
+//        
+//        return cell;
+//    }
     Product1Cell *cell = [Product1Cell createCellWithTableView:tableView];
     if (_dict) {
         NSString * content = nil;
@@ -301,6 +298,8 @@
             content = [NSString stringWithFormat:@"店铺电话：%@",_dict[@"pro"][indexPath.section][@"tel"]];
         }else if (indexPath.row == 2){
             content = [NSString stringWithFormat:@"营业时间：%@",_dict[@"pro"][indexPath.section][@"business_hours"]];
+        }else if (indexPath.row == 3){
+            content = @"货架入口";
         }
         cell.contentString = content;
         

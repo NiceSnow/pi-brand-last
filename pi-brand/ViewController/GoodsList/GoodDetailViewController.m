@@ -14,9 +14,10 @@
 
 #define tableViewW (screenWidth )
 
-@interface GoodDetailViewController ()<UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate>{
+@interface GoodDetailViewController ()<UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate,adviceDelegate>{
     CGFloat width;
     CGFloat height;
+    UIButton* _rightBtn;
 }
 @property(nonatomic,strong) UITableView* tableView;
 @property (nonatomic, strong) NSArray* AdArray;
@@ -28,6 +29,10 @@
 @end
 
 @implementation GoodDetailViewController
+
+-(void)returnIndex:(NSInteger)index;{
+    [_rightBtn setTitle:[NSString stringWithFormat:@"%ld/%ld",index+1,_AdArray.count] forState:normal];
+}
 
 -(void)setC_id:(NSString *)c_id{
     _c_id = c_id;
@@ -47,7 +52,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"货架展示";
+    
     self.view.backgroundColor = [UIColor whiteColor];
 //    [self.view addSubview:self.tableView];
     [HUDView showHUD:self];
@@ -60,7 +65,10 @@
             _AdArray = data;
             if (data.count>0) {
                 self.ADView.dataArray = data;
+                self.ADView.delegate = self;
+                self.title = _AdArray[0][@"name"];
                 [self.view addSubview:self.ADView];
+                [_rightBtn setTitle:[NSString stringWithFormat:@"1/%ld",_AdArray.count] forState:normal];
             }
             [HUDView hiddenHUD];
 //            tianjia scrollView;
@@ -77,23 +85,27 @@
     recognizer.delegate = self;
     [self.view addGestureRecognizer:recognizer];
     
-    UIButton* leftBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
-    [leftBtn setImage:[UIImage imageNamed:@"icon_nav"] forState:normal];
-    [leftBtn addTarget:self action:@selector(presentLeftMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
+//    UIButton* leftBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
+//    [leftBtn setImage:[UIImage imageNamed:@"icon_nav"] forState:normal];
+//    [leftBtn addTarget:self action:@selector(presentLeftMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
     UIButton* leftBtn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
     leftBtn2.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [leftBtn2 setImage:[UIImage imageNamed:@"back"] forState:normal];
     [leftBtn2 addTarget:self action:@selector(leftPress) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.leftBarButtonItems = @[[[UIBarButtonItem alloc]initWithCustomView:leftBtn],[[UIBarButtonItem alloc]initWithCustomView:leftBtn2]];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn2];
+//  @[[[UIBarButtonItem alloc]initWithCustomView:leftBtn],[[UIBarButtonItem alloc]initWithCustomView:leftBtn2]];
     
+    
+//    UIButton* rightBtn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
+//    rightBtn2.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+//    [rightBtn2 setImage:[UIImage imageNamed:@"icon_product"] forState:normal];
+//    [rightBtn2 addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
     UIButton* rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
-    [rightBtn setImage:[UIImage imageNamed:@"chose"] forState:normal];
-    [rightBtn addTarget:self action:@selector(leftPress) forControlEvents:UIControlEventTouchUpInside];
-    UIButton* rightBtn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
-    rightBtn2.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
-    [rightBtn2 setImage:[UIImage imageNamed:@"icon_product"] forState:normal];
-    [rightBtn2 addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc]initWithCustomView:rightBtn],[[UIBarButtonItem alloc]initWithCustomView:rightBtn2]];
+    [rightBtn setTitleColor:[UIColor blackColor] forState:normal];
+//    rightBtn.backgroundColor = [UIColor redColor];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
+    _rightBtn = rightBtn;
+//  @[[[UIBarButtonItem alloc]initWithCustomView:rightBtn],[[UIBarButtonItem alloc]initWithCustomView:rightBtn2]];
     // Do any additional setup after loading the view.
 //    [self.view addSubview:self.backBtn];
 //    [self.backBtn mas_makeConstraints:^(MASConstraintMaker *make) {

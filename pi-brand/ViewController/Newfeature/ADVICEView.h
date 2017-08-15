@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol adviceDelegate <NSObject>
+
+-(void)returnIndex:(NSInteger)index;
+
+@end
+
 @interface ADVICEView : UIView
 @property(nonatomic,strong) NSArray* dataArray;
+
+@property(nonatomic,assign)id<adviceDelegate>delegate;
 @end

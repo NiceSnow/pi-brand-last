@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface wareHouseTableViewCell : UITableViewCell
-
++ (instancetype)createCellWithTableView:(UITableView *)tableView;
+-(void)updataCellWithString:(NSString*)text;
 @end
