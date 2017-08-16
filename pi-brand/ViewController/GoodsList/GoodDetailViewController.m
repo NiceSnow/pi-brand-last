@@ -17,7 +17,7 @@
 @interface GoodDetailViewController ()<UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate,adviceDelegate>{
     CGFloat width;
     CGFloat height;
-    UIButton* _rightBtn;
+    UILabel* _rightBtn;
 }
 @property(nonatomic,strong) UITableView* tableView;
 @property (nonatomic, strong) NSArray* AdArray;
@@ -31,7 +31,15 @@
 @implementation GoodDetailViewController
 
 -(void)returnIndex:(NSInteger)index;{
-    [_rightBtn setTitle:[NSString stringWithFormat:@"%ld/%ld",index+1,_AdArray.count] forState:normal];
+    NSString* string = [NSString stringWithFormat:@"%ld/%ld",index+1,_AdArray.count];
+    NSArray* arr = [string componentsSeparatedByString:@"/"];
+    NSMutableAttributedString *AttributedStr = [[NSMutableAttributedString alloc]initWithString:string];
+    [AttributedStr addAttribute:NSForegroundColorAttributeName
+     
+                          value:UICOLOR_RGB_Alpha(0x959595, 1)
+     
+                          range:NSMakeRange(0, 1)];
+    _rightBtn.attributedText = AttributedStr;
 }
 
 -(void)setC_id:(NSString *)c_id{
@@ -68,7 +76,15 @@
                 self.ADView.delegate = self;
                 self.title = _AdArray[0][@"name"];
                 [self.view addSubview:self.ADView];
-                [_rightBtn setTitle:[NSString stringWithFormat:@"1/%ld",_AdArray.count] forState:normal];
+                NSString* string = [NSString stringWithFormat:@"1/%ld",_AdArray.count];
+                NSArray* arr = [string componentsSeparatedByString:@"/"];
+                NSMutableAttributedString *AttributedStr = [[NSMutableAttributedString alloc]initWithString:string];
+                [AttributedStr addAttribute:NSForegroundColorAttributeName
+                 
+                                      value:UICOLOR_RGB_Alpha(0x959595, 1)
+                 
+                                      range:NSMakeRange(0, 1)];
+                _rightBtn.attributedText = AttributedStr;
             }
             [HUDView hiddenHUD];
 //            tianjia scrollView;
@@ -100,8 +116,10 @@
 //    rightBtn2.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
 //    [rightBtn2 setImage:[UIImage imageNamed:@"icon_product"] forState:normal];
 //    [rightBtn2 addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
-    UIButton* rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
-    [rightBtn setTitleColor:[UIColor blackColor] forState:normal];
+    UILabel* rightBtn = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 65, 35)];
+    rightBtn.font = [UIFont systemFontOfSize:16];
+    rightBtn.textColor = [UIColor blackColor];
+    rightBtn.textAlignment = NSTextAlignmentCenter;
 //    rightBtn.backgroundColor = [UIColor redColor];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
     _rightBtn = rightBtn;

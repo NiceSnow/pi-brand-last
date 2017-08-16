@@ -106,6 +106,9 @@
         [backImageView sd_setImageWithURL:[imageString safeUrlString] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
             CGSize imageSize = image.size;
             backImageView.frame = CGRectMake(0, 0, screenWidth, imageSize.height/imageSize.width*screenWidth);
+            if (imageSize.height/imageSize.width*screenWidth<=screenHeight) {
+                tableView.scrollEnabled = NO;
+            }
             tableView.tableHeaderView = backImageView;
             [UIView transitionWithView:backImageView duration:during options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
                 backImageView.alpha = 1;

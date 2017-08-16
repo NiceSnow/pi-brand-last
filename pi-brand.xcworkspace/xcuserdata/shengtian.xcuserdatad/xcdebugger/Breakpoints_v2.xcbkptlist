@@ -9,102 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "pi-brand/ViewController/GoodsList/GoodDetailViewController.m"
-            timestampString = "524467095.470866"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pi-brand/ViewController/GoodsList/GoodDetailViewController.m"
-            timestampString = "524468360.884536"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pi-brand/ViewController/GoodsList/GoodDetailViewController.m"
-            timestampString = "524467796.146714"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pi-brand/ViewController/GoodsList/GoodDetailViewController.m"
-            timestampString = "524468354.94342"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[GoodDetailViewController viewDidLoad]"
-                  moduleName = "pi-brand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/guojinghan/Documents/pi-brand-last/pi-brand/ViewController/GoodsList/GoodDetailViewController.m"
-                  timestampString = "524473315.500409"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "236">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__39-[GoodDetailViewController viewDidLoad]_block_invoke"
-                  moduleName = "pi-brand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/guojinghan/Documents/pi-brand-last/pi-brand/ViewController/GoodsList/GoodDetailViewController.m"
-                  timestampString = "524473315.501726"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "88">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "pi-brand/ViewController/GoodsList/WarehouseViewController.m"
             timestampString = "524468406.976878"
             startingColumnNumber = "9223372036854775807"
@@ -170,7 +74,7 @@
                   moduleName = "pi-brand"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guojinghan/Documents/pi-brand-last/pi-brand/ViewController/Search/SearchViewController.m"
-                  timestampString = "524473315.512861"
+                  timestampString = "524539513.075369"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
@@ -185,12 +89,12 @@
                   moduleName = "pi-brand"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guojinghan/Documents/pi-brand-last/pi-brand/ViewController/Search/SearchViewController.m"
-                  timestampString = "524473315.514191"
+                  timestampString = "524539513.076712"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "50"
                   endingLineNumber = "50"
-                  offsetFromSymbolStart = "88">
+                  offsetFromSymbolStart = "92">
                </Location>
             </Locations>
          </BreakpointContent>
