@@ -305,18 +305,18 @@
         
     }
     cell.imageString = self.imageArray[indexPath.row];
-//    if (indexPath.row == 2) {
-//        cell.row.hidden = YES;
-//    }
-//    if (indexPath.section == [_dict[@"pro"] count]-1) {
-//        if (indexPath.row == 2) {
-//            cell.lineView.hidden = YES;
-//        }else{
-//            cell.lineView.hidden = NO;
-//        }
-//    }else{
-//        cell.lineView.hidden = NO;
-//    }
+    if (indexPath.row == 2) {
+        cell.row.hidden = YES;
+    }
+    if (indexPath.section == [_dict[@"pro"] count]-1) {
+        if (indexPath.row == 2) {
+            
+        }else{
+            
+        }
+    }else{
+        
+    }
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
