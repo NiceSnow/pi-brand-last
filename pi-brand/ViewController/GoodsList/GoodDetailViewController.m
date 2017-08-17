@@ -63,6 +63,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
 //    [self.view addSubview:self.tableView];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [HUDView showHUD:self];
     [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/advert_list" Parameter:@{@"c_id":_c_id,@"s_id":_s_id} succeed:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
