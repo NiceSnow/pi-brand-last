@@ -90,6 +90,7 @@
 		2DB773E81F2ECA7700F3FD6B /* shopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7739B1F2ECA7700F3FD6B /* shopViewController.m */; };
 		2DB773E91F2ECA7700F3FD6B /* shopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB7739C1F2ECA7700F3FD6B /* shopViewController.xib */; };
 		2DB773EA1F2ECA7700F3FD6B /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7739F1F2ECA7700F3FD6B /* WebViewController.m */; };
+		2DDAE1731F458D6D002D51CC /* UIViewController+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDAE1721F458D6D002D51CC /* UIViewController+AOP.m */; };
 		2DF071131F3D49A10053C681 /* EntranceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF071111F3D49A10053C681 /* EntranceTableViewCell.m */; };
 		2DF071141F3D49A10053C681 /* EntranceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF071121F3D49A10053C681 /* EntranceTableViewCell.xib */; };
 		2DF071181F3D62700053C681 /* WarehouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF071171F3D62700053C681 /* WarehouseViewController.m */; };
@@ -280,6 +281,8 @@
 		2DB7739C1F2ECA7700F3FD6B /* shopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = shopViewController.xib; sourceTree = "<group>"; };
 		2DB7739E1F2ECA7700F3FD6B /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		2DB7739F1F2ECA7700F3FD6B /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		2DDAE1711F458D6D002D51CC /* UIViewController+AOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AOP.h"; sourceTree = "<group>"; };
+		2DDAE1721F458D6D002D51CC /* UIViewController+AOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AOP.m"; sourceTree = "<group>"; };
 		2DF071101F3D49A10053C681 /* EntranceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntranceTableViewCell.h; sourceTree = "<group>"; };
 		2DF071111F3D49A10053C681 /* EntranceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntranceTableViewCell.m; sourceTree = "<group>"; };
 		2DF071121F3D49A10053C681 /* EntranceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntranceTableViewCell.xib; sourceTree = "<group>"; };
@@ -440,6 +443,8 @@
 		2DB7730B1F2ECA7700F3FD6B /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				2DDAE1711F458D6D002D51CC /* UIViewController+AOP.h */,
+				2DDAE1721F458D6D002D51CC /* UIViewController+AOP.m */,
 				2DB7730C1F2ECA7700F3FD6B /* NSArray+extension.h */,
 				2DB7730D1F2ECA7700F3FD6B /* NSArray+extension.m */,
 				2DB7730E1F2ECA7700F3FD6B /* NSData+extension.h */,
@@ -1012,6 +1017,7 @@
 				2DB773AE1F2ECA7700F3FD6B /* NSString+XLSegmentModelPrtol.m in Sources */,
 				2DB773BA1F2ECA7700F3FD6B /* companyContentTableViewCell.m in Sources */,
 				2DB773B21F2ECA7700F3FD6B /* XLScrollView.m in Sources */,
+				2DDAE1731F458D6D002D51CC /* UIViewController+AOP.m in Sources */,
 				2DB773BC1F2ECA7700F3FD6B /* CompanyHeaderTableViewCell.m in Sources */,
 				60CCFE4F1F2F677300593335 /* shareModel.m in Sources */,
 				2DB773A11F2ECA7700F3FD6B /* BaseTabBarController.m in Sources */,

@@ -9,4 +9,5 @@ target ‘pi-brand’ do
 
     pod ‘UMengUShare/UI’
     pod ‘UMengUShare/Social/ReducedWeChat'
+    pod 'UMengAnalytics-NO-IDFA'
 end

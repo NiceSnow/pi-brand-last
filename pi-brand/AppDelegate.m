@@ -14,6 +14,7 @@
 #import "NewFeatureVIew.h"
 
 #import <UMSocialCore/UMSocialCore.h>
+#import "UMMobClick/MobClick.h"
 
 
 @interface AppDelegate ()
@@ -64,6 +65,10 @@
      [微信平台从U-Share 4/5升级说明]http://dev.umeng.com/social/ios/%E8%BF%9B%E9%98%B6%E6%96%87%E6%A1%A3#1_1
      */
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:WXAppId appSecret:WXAppSecret redirectURL:nil];
+    
+    UMConfigInstance.appKey = UMAppKey;
+    UMConfigInstance.channelId = @"App Store";
+    [MobClick startWithConfigure:UMConfigInstance];//配置以上参数后调用此方法初始化SDK！
 }
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
