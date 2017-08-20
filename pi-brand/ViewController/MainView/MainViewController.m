@@ -66,7 +66,7 @@
 }
 
 -(void)getdata{
-    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/index" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
+    [[HTTPRequest instance]PostRequestWithURL:@"https://pi.harmay.com/home/api/index" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
         if (succeed) {
             NSDictionary* data = [responseObject objectForKey:@"data"];

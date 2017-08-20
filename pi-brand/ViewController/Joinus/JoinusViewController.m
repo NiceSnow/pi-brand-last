@@ -98,7 +98,7 @@
 }
 
 -(void)getdata{
-    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/recruit" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
+    [[HTTPRequest instance]PostRequestWithURL:@"https://pi.harmay.com/home/api/recruit" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
         if (succeed) {
             NSDictionary* data = [responseObject objectForKey:@"data"];
@@ -140,7 +140,7 @@
 -(void)getmessageWithJobID:(NSString *)jobID
 {
 //    招聘职位信息  下面加载webview
-    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/recruit_type" Parameter:@{@"id":jobID} succeed:^(NSURLSessionDataTask *task, id responseObject) {
+    [[HTTPRequest instance]PostRequestWithURL:@"https://pi.harmay.comhome/api/recruit_type" Parameter:@{@"id":jobID} succeed:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
         if (succeed) {
             

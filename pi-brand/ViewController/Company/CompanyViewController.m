@@ -301,7 +301,7 @@
 
 
 -(void)getdata{
-    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/company" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
+    [[HTTPRequest instance]PostRequestWithURL:@"https://pi.harmay.com/home/api/company" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
         if (succeed) {
             NSDictionary* data = [responseObject objectForKey:@"data"];
@@ -332,7 +332,7 @@
 }
 
 -(void)getdata2{
-    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/activity" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
+    [[HTTPRequest instance]PostRequestWithURL:@"https://pi.harmay.com/home/api/activity" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
         if (succeed) {
             NSDictionary* data = [responseObject objectForKey:@"data"];

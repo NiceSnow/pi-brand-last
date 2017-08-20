@@ -59,7 +59,7 @@
         parameter = @{@"city_id":@(cid)};
     }
     
-    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/product_city" Parameter:parameter succeed:^(NSURLSessionDataTask *task, id responseObject) {
+    [[HTTPRequest instance]PostRequestWithURL:@"https://pi.harmay.com/home/api/product_city" Parameter:parameter succeed:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
         if (succeed) {
             NSDictionary* data = [responseObject objectForKey:@"data"];
@@ -333,7 +333,7 @@
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",_dict[@"pro"][indexPath.section][@"tel"]]]];
     }else if (indexPath.row == 3){
         [HUDView showHUD:self];
-        [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/goods_shelves_list" Parameter:@{@"c_id":_dict[@"pro"][indexPath.section][@"c_id"]} succeed:^(NSURLSessionDataTask *task, id responseObject) {
+        [[HTTPRequest instance]PostRequestWithURL:@"https://pi.harmay.com/home/api/goods_shelves_list" Parameter:@{@"c_id":_dict[@"pro"][indexPath.section][@"c_id"]} succeed:^(NSURLSessionDataTask *task, id responseObject) {
             BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
             if (succeed) {
                 NSArray* dataArray = [responseObject objectForKey:@"data"];
