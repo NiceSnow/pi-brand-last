@@ -47,7 +47,7 @@
     if (refresh) {
         paramet = @"2";
     }else paramet = @"";
-    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/store_list" Parameter:@{@"add_time":paramet} succeed:^(NSURLSessionDataTask *task, id responseObject) {
+    [[HTTPRequest instance]PostRequestWithURL:@"https://pi.harmay.com/home/api/store_list" Parameter:@{@"add_time":paramet} succeed:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
         if (succeed) {
             NSDictionary* data = [responseObject objectForKey:@"data"];

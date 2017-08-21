@@ -46,7 +46,7 @@
             return;
         }
     }
-    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/search_list" Parameter:@{@"search":string} succeed:^(NSURLSessionDataTask *task, id responseObject) {
+    [[HTTPRequest instance]PostRequestWithURL:@"https://pi.harmay.com/home/api/search_list" Parameter:@{@"search":string} succeed:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
         if (succeed) {
             NSArray* dataArr = [responseObject objectForKey:@"data"];
@@ -159,7 +159,7 @@
             [self.navigationController pushViewController:webVC animated:YES];
         }else{
             ActiveViewController* ActiveVC = [[ActiveViewController alloc]init];
-            [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/activity_detail" Parameter:@{@"id":modle.ID} succeed:^(NSURLSessionDataTask *task, id responseObject) {
+            [[HTTPRequest instance]PostRequestWithURL:@"https://pi.harmay.com/home/api/activity_detail" Parameter:@{@"id":modle.ID} succeed:^(NSURLSessionDataTask *task, id responseObject) {
                 BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
                 if (succeed) {
                     NSDictionary* data = [responseObject objectForKey:@"data"];
@@ -207,7 +207,7 @@
 //    _search.keyboardAppearance = UIReturnKeySearch;
     _search.returnKeyType = UIReturnKeySearch;
     _tableView.tableFooterView = self.footerView;
-    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/search_key" Parameter:@{@"search":_search.text} succeed:^(NSURLSessionDataTask *task, id responseObject) {
+    [[HTTPRequest instance]PostRequestWithURL:@"https://pi.harmay.com/home/api/search_key" Parameter:@{@"search":_search.text} succeed:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
         if (succeed) {
             NSString* string = [responseObject objectForKey:@"data"];
