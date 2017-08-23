@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic, strong) UIImageView* backImageView;
 @property (nonatomic, strong)NSMutableArray * dataArray;
+@property (nonatomic, strong)NSMutableArray * subArray;
 @property (nonatomic, strong)NSDictionary * jobDict;
 @property(nonatomic ,assign) BOOL zoom;
 @property(nonatomic ,assign)BOOL first;
@@ -113,7 +114,7 @@
             [_dataArray addObject:@[model,mainModel]];
             NSArray* sub = [joinSubModel mj_objectArrayWithKeyValuesArray:[data objectForKey:@"sub"]];
             [_dataArray addObject:sub];
-            
+            _subArray = [data objectForKey:@"sub"];
             joinSubModel * model1 = _dataArray[1][0];
             [self getmessageWithJobID:model1.m_id];
             [_tableview reloadData];
@@ -182,12 +183,16 @@
         JoinusViewCell * cell = [JoinusViewCell createCellWithTableView:tableView];
         if (_jobDict    ) {
             cell.dict = _jobDict;
+            cell.subArray = _subArray;
             joinMainModel* mainModel = [[_dataArray objectAtIndex:0] objectAtIndex:1];
             cell.telephone = mainModel.telephone;
         }
         __weak typeof(self)weakSelf = self;
         cell.select = select;
         cell.block = ^(NSInteger index) {
+            if (index>_subArray.count-1) {
+                return ;
+            }
             joinSubModel *model = weakSelf.dataArray[1][index];
             select = index;
             [weakSelf getmessageWithJobID:model.m_id];

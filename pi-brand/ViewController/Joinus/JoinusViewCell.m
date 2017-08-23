@@ -9,10 +9,12 @@
 #import "JoinusViewCell.h"
 #import "joinSubModel.h"
 
+
 @interface JoinusViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
 @property (weak, nonatomic) IBOutlet UILabel *workTypelabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+@property (weak, nonatomic) IBOutlet UIView *lineView;
 
 
 @end
@@ -24,8 +26,37 @@
 
 -(void)setSelect:(NSInteger)select{
     _select = select;
-    UIImageView* imageView = [self.contentView viewWithTag:(_select+1+100)];
-    imageView.image  = [UIImage  imageNamed:[NSString stringWithFormat:@"icon_base%ld_sel",(_select+1)]];
+    if (_subArray) {
+        NSDictionary* dic = _subArray[_select];
+        UIButton* Btn = [self.contentView viewWithTag:(100+_select)];
+        [Btn sd_setImageWithURL:[NSURL URLWithString:dic[@"img2"]] forState:normal];
+    }
+}
+
+-(void)setSubArray:(NSArray *)subArray{
+    _subArray = subArray;
+    for (int i = 0; i< _subArray.count; i++) {
+        NSDictionary* dic = _subArray[i];
+        
+        UIButton* Btn = [self.contentView viewWithTag:(100+i)];
+
+        [Btn sd_setImageWithURL:[NSURL URLWithString:dic[@"img"]] forState:normal completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            
+            [Btn mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.width.mas_equalTo(40);
+                make.height.mas_equalTo(40);
+            }];
+        }];
+        
+        UILabel* lab = [self.contentView viewWithTag:(1000+i)];
+        lab.text = dic[@"title"];
+        
+        if (i == _subArray.count - 1) {
+            [_lineView mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(lab.mas_bottom).offset(20);
+            }];
+        }
+    }
 }
 
 + (instancetype)createCellWithTableView:(UITableView *)tableView
@@ -33,7 +64,7 @@
     static NSString * iden = @"JoinusViewCell";
     JoinusViewCell * cell = [tableView dequeueReusableCellWithIdentifier:iden];
     if (!cell) {
-        cell = [[JoinusViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:iden];
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"JoinusViewCell" owner:self options:nil]lastObject];
     }
     return cell;
 }
@@ -59,7 +90,7 @@
 }
 - (IBAction)btn1:(UIButton *)sender {
     if (self.block) {
-        self.block(sender.tag-1000);
+        self.block(sender.tag-100);
     }
 }
 - (IBAction)calButton:(UIButton *)sender {
