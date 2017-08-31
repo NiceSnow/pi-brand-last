@@ -117,8 +117,7 @@
             _subArray = [data objectForKey:@"sub"];
             joinSubModel * model1 = _dataArray[1][0];
             [self getmessageWithJobID:model1.m_id];
-            [_tableview reloadData];
-            [HUDView hiddenHUD];
+            
             if (urlString.length>0) {
                 
                 [_backImageView sd_setImageWithURL:[urlString safeUrlString] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
@@ -127,9 +126,7 @@
                     } completion:nil];
                 }];
             }
-            [UIView transitionWithView:self.tableview duration:tableViewDuring options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-                self.tableview.alpha = 1;
-            } completion:nil];
+            
         }
     } failed:^(NSURLSessionDataTask *task, NSError *error) {
         
@@ -151,6 +148,12 @@
             [self.tableview reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
             if (_first) {
                 [self.tableview scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]  atScrollPosition:UITableViewScrollPositionTop animated:YES];
+            }else{
+                [_tableview reloadData];
+                [HUDView hiddenHUD];
+                [UIView transitionWithView:self.tableview duration:tableViewDuring options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+                    self.tableview.alpha = 1;
+                } completion:nil];
             }
             _first = YES;
             
