@@ -316,12 +316,12 @@
 -(UIView *)titleView{
     if (!_titleView) {
         _titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 127, 16)];
-        UIImageView* imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"title_product"]];
+        UIImageView* imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"title_products"]];
         [_titleView addSubview:imageView];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(_titleView);
-            make.height.equalTo(@16);
-            make.width.equalTo(@127);
+            make.height.equalTo(@20);
+            make.width.equalTo(@176);
         }];
         
         _titleView.alpha = 0;

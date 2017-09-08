@@ -41,7 +41,7 @@
             make.height.mas_equalTo((screenWidth-50)*9/10*187/291);
         }];
         _backImageView.alpha = 0;
-        _contentLabel.numberOfLines = 2;
+        _contentLabel.numberOfLines = 0;
     }
     return self;
 }

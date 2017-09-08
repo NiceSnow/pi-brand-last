@@ -103,7 +103,7 @@
     
     UILabel * titleLabel = [UILabel new];
     titleLabel.text = _dict[@"head"][@"title"];
-    titleLabel.font = [UIFont boldSystemFontOfSize:18];
+    titleLabel.font = [UIFont boldSystemFontOfSize:17];
     titleLabel.textColor = UICOLOR_RGB_Alpha(0x000000, 1);
     [backView addSubview:titleLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -117,7 +117,7 @@
     [storeButton addTarget:self action:@selector(storeAction) forControlEvents:UIControlEventTouchUpInside];
     [storeButton setTitle:@"所有店铺" forState:normal];
     [storeButton setTitleColor:UICOLOR_RGB_Alpha(0x000000, 1) forState:normal];
-    storeButton.titleLabel.font = [UIFont systemFontOfSize:12];
+    storeButton.titleLabel.font = [UIFont systemFontOfSize:11];
     storeButton.titleEdgeInsets = UIEdgeInsetsMake(0, -5, 0, 0);
     [backView addSubview:storeButton];
     [storeButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -137,7 +137,7 @@
     [dateButton setTitle:@"上新时间" forState:UIControlStateSelected];
     [dateButton setTitleColor:UICOLOR_RGB_Alpha(0x000000, 1) forState:normal];
     [dateButton setTitleColor:UICOLOR_RGB_Alpha(0x000000, 1) forState:UIControlStateSelected];
-    dateButton.titleLabel.font = [UIFont systemFontOfSize:12];
+    dateButton.titleLabel.font = [UIFont systemFontOfSize:11];
     dateButton.titleEdgeInsets = UIEdgeInsetsMake(0, -5, 0, 0);
     [backView addSubview:dateButton];
     [dateButton mas_makeConstraints:^(MASConstraintMaker *make) {

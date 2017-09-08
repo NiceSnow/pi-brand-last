@@ -204,8 +204,8 @@
         [_titleView addSubview:imageView];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(_titleView);
-            make.height.equalTo(@16);
-            make.width.equalTo(@127);
+            make.height.equalTo(@20);
+            make.width.equalTo(@176);
         }];
         
         _titleView.alpha = 0;

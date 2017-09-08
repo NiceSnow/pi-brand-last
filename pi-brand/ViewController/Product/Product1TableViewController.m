@@ -147,7 +147,7 @@
         
         UILabel * titleLabel = [UILabel new];
         titleLabel.text = _dict[@"head"][@"title"];
-        titleLabel.font = [UIFont boldSystemFontOfSize:18];
+        titleLabel.font = [UIFont boldSystemFontOfSize:17];
         titleLabel.textColor = UICOLOR_RGB_Alpha(0x000000, 1);
         [backView addSubview:titleLabel];
         [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -159,7 +159,7 @@
         
         _subTitleLabel = [UILabel new];
         _subTitleLabel.textColor  = UICOLOR_RGB_Alpha(0x000000, 1);
-        _subTitleLabel.font = [UIFont systemFontOfSize:14];
+        _subTitleLabel.font = [UIFont systemFontOfSize:13];
         _subTitleLabel.text = @"实体店体验馆";
         [backView addSubview:_subTitleLabel];
         [_subTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -194,7 +194,7 @@
             [btn setTitle:cityArray[i][@"city_name"] forState:UIControlStateSelected];
             [btn setTitleColor:UICOLOR_RGB_Alpha(0x6b6a6a, 1) forState:normal];
             [btn setTitleColor:UICOLOR_RGB_Alpha(0x6b6a6a, 1) forState:UIControlStateSelected];
-            btn.titleLabel.font = [UIFont systemFontOfSize:14];
+            btn.titleLabel.font = [UIFont systemFontOfSize:13];
             CGFloat Width_Space   =  10.0f;
             CGFloat Height_Space  =  10.0f;
             CGFloat x = 15;
@@ -228,7 +228,7 @@
     
     UILabel * label = [UILabel new];
     label.text = proArray[section][@"city_name"];
-    label.font = [UIFont systemFontOfSize:14];
+    label.font = [UIFont systemFontOfSize:13];
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = UICOLOR_RGB_Alpha(0xe52c4e, 1);
     [backView addSubview:label];
@@ -240,7 +240,7 @@
     
     UILabel * nameLabel = [UILabel new];
     nameLabel.text = proArray[section][@"summary"];
-    nameLabel.font = [UIFont systemFontOfSize:16];
+    nameLabel.font = [UIFont systemFontOfSize:15];
     nameLabel.textColor = UICOLOR_RGB_Alpha(0x313131, 1);
     nameLabel.textAlignment = NSTextAlignmentCenter;
     NSMutableAttributedString *AttributedStr = [[NSMutableAttributedString alloc]initWithString:nameLabel.text];
