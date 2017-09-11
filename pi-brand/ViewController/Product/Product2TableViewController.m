@@ -91,7 +91,7 @@
     [logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.mas_equalTo(15);
         make.width.mas_offset(screenWidth*320/750);
-        make.height.mas_offset((screenWidth*320/750)*34/292);
+        make.height.mas_offset((screenWidth*320/750)*35/335);
     }];
     if ([_dict[@"head"][@"icon"] length]>0) {
         [logoImageView sd_setImageWithURL:[_dict[@"head"][@"icon"] safeUrlString] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {

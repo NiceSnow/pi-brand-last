@@ -43,7 +43,7 @@
         self = [[[NSBundle mainBundle]loadNibNamed:@"JoinusViewCellCell" owner:self options:nil]lastObject];
         [_logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.mas_offset(screenWidth*320/750);
-            make.height.mas_offset((screenWidth*320/750)*34/292);
+            make.height.mas_offset((screenWidth*320/750)*35/335);
         }];
         
         [_iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
