@@ -79,7 +79,7 @@
         make.top.offset(15);
         make.left.offset(15);
         make.width.mas_equalTo(screenWidth*320/750);
-        make.height.mas_equalTo((screenWidth*320/750)*35/320);
+        make.height.mas_equalTo((screenWidth*320/750)*34/292);
     }];
     return view;
 }

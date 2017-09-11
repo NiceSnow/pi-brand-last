@@ -142,7 +142,7 @@
             make.top.mas_equalTo(15);
             make.left.offset(15);
             make.width.mas_offset(screenWidth*320/750);
-            make.height.mas_offset((screenWidth*320/750)*35/320);
+            make.height.mas_offset((screenWidth*320/750)*34/292);
         }];
         
         UILabel * titleLabel = [UILabel new];
