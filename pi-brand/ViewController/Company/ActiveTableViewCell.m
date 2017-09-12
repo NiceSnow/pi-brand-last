@@ -51,7 +51,7 @@
         self = [[[NSBundle mainBundle]loadNibNamed:@"ActiveTableViewCell" owner:self options:nil]lastObject];
         [_headerIamgeView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.mas_equalTo(screenWidth-50);
-            make.height.mas_equalTo((screenWidth-50)*9/10*187/291);
+            make.height.mas_equalTo((screenWidth-50)*240/405);
         }];
         _headerIamgeView.alpha = 0;
     }
