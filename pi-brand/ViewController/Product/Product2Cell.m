@@ -38,7 +38,7 @@
 //            make.width.mas_equalTo(screenWidth-50);
 //            make.height.mas_equalTo((screenWidth-50)*429/632);
             make.width.mas_equalTo(screenWidth-50);
-            make.height.mas_equalTo((screenWidth-50)*9/10*187/291);
+            make.height.mas_equalTo((screenWidth-50)*240/405);
         }];
         _backImageView.alpha = 0;
     }
