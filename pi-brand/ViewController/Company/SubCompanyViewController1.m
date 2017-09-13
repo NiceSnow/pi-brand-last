@@ -132,6 +132,7 @@
     if (!_webView) {
         _webView = [[UIWebView alloc]initWithFrame:CGRectMake(18, 0, screenWidth - 36, 1)];
         _webView.backgroundColor = [UIColor whiteColor];
+        _webView.dataDetectorTypes = UIDataDetectorTypeNone;
         _webView.delegate = self;
         _webView.scrollView.scrollEnabled = NO;
         _webView.scrollView.showsHorizontalScrollIndicator = NO;
