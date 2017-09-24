@@ -51,6 +51,7 @@
         UILabel* lab = [self.contentView viewWithTag:(1000+i)];
         lab.text = dic[@"title"];
         
+        
         UIButton* passBtn = [UIButton new];
         passBtn.tag = i + 100;
         [passBtn addTarget:self action:@selector(btn1:) forControlEvents:UIControlEventTouchUpInside];

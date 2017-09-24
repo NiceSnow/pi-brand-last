@@ -4,28 +4,18 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            scope = "0"
-            stopOnStyle = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "pi-brand/ViewController/Joinus/JoinusViewController.m"
-            timestampString = "525196612.947939"
+            filePath = "pi-brand/ViewController/Joinus/JoinusViewCell.m"
+            timestampString = "527964767.404803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "-setSubArray:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -324,7 +324,7 @@
             make.width.equalTo(@176);
         }];
         
-        _titleView.alpha = 0;
+//        _titleView.alpha = 0;
     }
     return _titleView;
 }

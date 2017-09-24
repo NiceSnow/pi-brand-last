@@ -199,7 +199,7 @@
 
 -(UIView *)titleView{
     if (!_titleView) {
-        _titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 127, 16)];
+        _titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 176, 20)];
         UIImageView* imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"main_logo"]];
         [_titleView addSubview:imageView];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -208,7 +208,7 @@
             make.width.equalTo(@176);
         }];
         
-        _titleView.alpha = 0;
+//        _titleView.alpha = 0;
     }
     return _titleView;
 }
