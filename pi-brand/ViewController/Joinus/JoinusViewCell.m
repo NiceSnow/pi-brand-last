@@ -1,4 +1,4 @@
-//
+ //
 //  JoinusViewCell.m
 //  HARMAY_PI_BRAND
 //
@@ -50,17 +50,21 @@
         
         UILabel* lab = [self.contentView viewWithTag:(1000+i)];
         lab.text = dic[@"title"];
+//        UIView* cosView = [self viewWithTag:i + 10000];
+//        if (cosView) {
+//            return;
+//        }else{
+            UIButton* passBtn = [UIButton new];
+            passBtn.tag = i + 100;
+            [passBtn addTarget:self action:@selector(btn1:) forControlEvents:UIControlEventTouchUpInside];
+            [self addSubview:passBtn];
+            //        passBtn.backgroundColor = [UIColor redColor ];
+            [passBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(Btn);
+                make.left.right.bottom.equalTo(lab);
+            }];
+//        }
         
-        
-        UIButton* passBtn = [UIButton new];
-        passBtn.tag = i + 100;
-        [passBtn addTarget:self action:@selector(btn1:) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:passBtn];
-//        passBtn.backgroundColor = [UIColor redColor ];
-        [passBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(Btn);
-            make.left.right.bottom.equalTo(lab);
-        }];
         if (i == _subArray.count - 1) {
             [_lineView mas_updateConstraints:^(MASConstraintMaker *make) {
                 make.top.equalTo(lab.mas_bottom).offset(20);

@@ -1219,7 +1219,7 @@
 				INFOPLIST_FILE = "pi-brand/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = iOS.harmay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harmay.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1235,7 +1235,7 @@
 				INFOPLIST_FILE = "pi-brand/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = iOS.harmay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harmay.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

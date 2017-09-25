@@ -147,9 +147,14 @@
             NSIndexPath *indexPath=[NSIndexPath indexPathForRow:1 inSection:0];
             [self.tableview reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
             if (_first) {
-                [self.tableview scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]  atScrollPosition:UITableViewScrollPositionTop animated:YES];
+                dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2/*延迟执行时间*/ * NSEC_PER_SEC));
+                
+                dispatch_after(delayTime, dispatch_get_main_queue(), ^{
+                    [self.tableview scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]  atScrollPosition:UITableViewScrollPositionTop animated:YES];
+                });
+                
             }else{
-                [_tableview reloadData];
+                [self.tableview reloadData];
                 [HUDView hiddenHUD];
                 [UIView transitionWithView:self.tableview duration:tableViewDuring options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
                     self.tableview.alpha = 1;

@@ -35,6 +35,10 @@
          [_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
              make.width.mas_equalTo(screenWidth-100);
          }];
+        [_iconImanegView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.offset(10);
+            make.bottom.offset(-10);
+        }];
     }
     return self;
 }
